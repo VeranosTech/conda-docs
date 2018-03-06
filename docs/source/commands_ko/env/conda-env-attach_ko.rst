@@ -8,65 +8,62 @@ conda env attach
 
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
-   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
    
    
    
    
    </PRE>
-   <H2>NAME</H2><PRE>
+   <H2>이름</H2><PRE>
           conda - conda env attach
    
    
    </PRE>
-   <H2>DESCRIPTION</H2><PRE>
-          usage: conda-env attach [-h] (<B>-n</B> NAME | <B>-r</B> REMOTE) [-p PATH] [--force]
+   <H2>설명</H2><PRE>
+          사용법: conda-env attach [-h] (<B>-n</B> NAME | <B>-r</B> REMOTE) [-p PATH] [--force]
    
           [--no-builds] [--json] [--debug] [--verbose]
                  notebook
    
-          WARNING:  This  command  is  deprecated  in conda 4.4 and scheduled for
-          removal in conda 4.5.
-   
-          Embeds information describing your conda environment into the  notebook
-          metadata
-   
+          주의:  이 명령은 콘다 4.4에서 만료되었고 콘다 4.5에서 삭제될 예정이다.
+
+          노트북 메타데이터에 사용자의 콘다 환경에 대한 정보를 넣는다.
+
    
    </PRE>
-   <H2>OPTIONS</H2><PRE>
-      <B>positional</B> <B>arguments:</B>
+   <H2>옵션</H2><PRE>
+      <B>위치</B> <B>인수:</B>
           notebook
-                 notebook file
+                 노트북 파일
    
-      <B>optional</B> <B>arguments:</B>
+      <B>선택</B> <B>인수:</B>
           <B>-h</B>, <B>--help</B>
-                 Show this help message and exit.
-   
+                 도움말 메세지를 보고 종료한다.
+
           <B>-n</B> NAME, <B>--name</B> NAME
-                 local environment definition
-   
+                 로컬 환경 정의.
+
           <B>-r</B> REMOTE, <B>--remote</B> REMOTE
-                 remote environment definition
-   
+                 리모트 환경 정의.
+
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full path to environment prefix
-   
+                 환경 접두어로의 경로.
+
           <B>--force</B>
-                 Replace existing environment definition
-   
+                 기존 환경 정의를 대체한다.
+
           <B>--no-builds</B>
-                 Remove build specification from dependencies
-   
-          <B>--json</B> Report all output as json. Suitable for using conda programmati-
-                 cally.
-   
+                 의존 요소로부터의 빌드 사양을 제거한다.
+
+          <B>--json</B> 모든 출력을 json으로 보고한다. 프로그래머식으로 콘다를 사용할 때 적합하다.
+
           <B>--debug</B>
-                 Show debug output.
-   
+                 디버그 출력을 본다.
+
           <B>--verbose</B>, <B>-v</B>
-                 Use once for info, twice for debug, three times for trace.
+                 한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
    
-      <B>examples:</B>
+      <B>예시:</B>
                  conda env attach <B>-n</B> base  notebook.ipynb  conda  env  attach  <B>-r</B>
                  user/environment notebook.ipynb
    

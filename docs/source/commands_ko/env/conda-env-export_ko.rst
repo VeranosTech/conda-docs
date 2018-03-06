@@ -8,62 +8,61 @@ conda env export
 
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
-   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
    
    
    
    
    </PRE>
-   <H2>NAME</H2><PRE>
+   <H2>이름</H2><PRE>
           conda - conda env export
    
    
    </PRE>
-   <H2>DESCRIPTION</H2><PRE>
-          usage: conda-env export [-h] [-c CHANNEL] [--override-channels]
+   <H2>설명</H2><PRE>
+          사용법: conda-env export [-h] [-c CHANNEL] [--override-channels]
    
           [-n ENVIRONMENT | <B>-p</B> PATH] [-f FILE] [--no-builds]
                  [--ignore-channels] [--json] [--debug] [--verbose]
    
-          Export a given environment
-   
+          주어진 환경을 내보낸다.
+
    
    </PRE>
-   <H2>OPTIONS</H2><PRE>
-      <B>optional</B> <B>arguments:</B>
+   <H2>옵션</H2><PRE>
+      <B>위치</B> <B>인수:</B>
           <B>-h</B>, <B>--help</B>
-                 Show this help message and exit.
+                 도움말 메세지를 보고 종료한다.
    
           <B>-c</B> CHANNEL, <B>--channel</B> CHANNEL
-                 Additional channel to include in the export
-   
+                 출력에 포함될 추가 채널.
+
           <B>--override-channels</B>
-                 Do not include .condarc channels
-   
+                 .condarc 채널을 포함하지 않는다.
+
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name of environment.
-   
+                 내보낼 환경 이름.
+
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full path to environment prefix.
+                 환경 접두어로의 경로.
    
           <B>-f</B> FILE, <B>--file</B> FILE
    
           <B>--no-builds</B>
-                 Remove build specification from dependencies
+                 의존 요소로부터의 빌드 사양을 제거한다.
    
           <B>--ignore-channels</B>
-                 Do not include channel names with package names.
-   
-          <B>--json</B> Report all output as json. Suitable for using conda programmati-
-                 cally.
-   
+                 패키지 이름에 채널 이름을 포함하지 않는다.
+
+          <B>--json</B> 모든 출력을 json으로 보고한다. 프로그래머식으로 콘다를 사용할 때 적합하다.
+
           <B>--debug</B>
-                 Show debug output.
+                 디버그 출력을 본다.
    
           <B>--verbose</B>, <B>-v</B>
-                 Use once for info, twice for debug, three times for trace.
+                 한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
    
-      <B>examples:</B>
+      <B>예시:</B>
                  conda env export conda env export <B>--file</B> SOME_FILE
    
    

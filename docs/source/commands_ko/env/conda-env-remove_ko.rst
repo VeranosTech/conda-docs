@@ -8,60 +8,58 @@ conda env remove
 
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
-   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
    
    
    
    
    </PRE>
-   <H2>NAME</H2><PRE>
+   <H2>이름</H2><PRE>
           conda - conda env remove
    
    
    </PRE>
-   <H2>DESCRIPTION</H2><PRE>
-          usage:  conda-env  remove  [-h]  [-n  ENVIRONMENT  |  <B>-p</B> PATH] [--json]
+   <H2>설명</H2><PRE>
+          사용법:  conda-env  remove  [-h]  [-n  ENVIRONMENT  |  <B>-p</B> PATH] [--json]
           [--debug]
    
                  [--verbose] [-q] [-y] [--dry-run]
    
-          Remove an environmentRemoves a provided environment.  You must  deacti-
-          vate the existing environment before you can remove it.
-   
+          주어진 환경을 삭제한다. 삭제할 환경은 비활성화되어 있어야 한다.
+
    
    </PRE>
-   <H2>OPTIONS</H2><PRE>
-      <B>optional</B> <B>arguments:</B>
+   <H2>옵션</H2><PRE>
+      <B>선택</B> <B>인수:</B>
           <B>-h</B>, <B>--help</B>
-                 Show this help message and exit.
+                 도움말 메세지를 보고 종료한다.
    
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name of environment.
-   
+                 삭제할 환경의 이름.
+
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full path to environment prefix.
-   
-          <B>--json</B> Report all output as json. Suitable for using conda programmati-
-                 cally.
-   
+                 환경 접두어로의 전체 경로.
+
+          <B>--json</B> 모든 출력을 json으로 보고한다. 프로그래머식으로 콘다를 사용할 때 적합하다.
+
           <B>--debug</B>
-                 Show debug output.
-   
+                 디버그 출력을 본다.
+
           <B>--verbose</B>, <B>-v</B>
-                 Use once for info, twice for debug, three times for trace.
+                 한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
    
           <B>-q</B>, <B>--quiet</B>
-                 Do not display progress bar.
-   
+                 진행바를 표시하지 않는다.
+
           <B>-y</B>, <B>--yes</B>
-                 Do not ask for confirmation.
-   
+                 진행중에 확인을 요청하지 않는다.
+
           <B>--dry-run</B>
-                 Only display what would have been done.
-   
+                 완료된 것만을 표시한다.
+
    
    </PRE>
-   <H2>EXAMPLES</H2><PRE>
+   <H2>예시</H2><PRE>
                  conda env remove --name FOO conda env remove -n FOO
    
    

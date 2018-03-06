@@ -8,61 +8,59 @@ conda env create
 
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
-   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
    
    
    
    
    </PRE>
-   <H2>NAME</H2><PRE>
+   <H2>이름</H2><PRE>
           conda - conda env create
    
    
    </PRE>
-   <H2>DESCRIPTION</H2><PRE>
-          usage: conda-env create [-h] [-f FILE] [-n ENVIRONMENT | <B>-p</B> PATH] [-q]
+   <H2>설명</H2><PRE>
+          사용법: conda-env create [-h] [-f FILE] [-n ENVIRONMENT | <B>-p</B> PATH] [-q]
    
           [--force] [--json] [--debug] [--verbose]
                  [remote_definition]
    
-          Create an environment based on an environment file
-   
+          환경 파일로부터 콘다 환경을 생성한다.
+
    
    </PRE>
-   <H2>OPTIONS</H2><PRE>
-      <B>positional</B> <B>arguments:</B>
+   <H2>옵션</H2><PRE>
+      <B>위치</B> <B>인수:</B>
           remote_definition
-                 remote environment definition / IPython notebook
+                 리모트 환경 정의 / IPython 노트북
    
-      <B>optional</B> <B>arguments:</B>
+      <B>선택</B> <B>인수:</B>
           <B>-h</B>, <B>--help</B>
-                 Show this help message and exit.
-   
+                 도움말을 보고 종료한다.
+
           <B>-f</B> FILE, <B>--file</B> FILE
-                 environment definition file (default: environment.yml)
+                 환경 정의 파일. (기본: environment.yml)
    
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name of environment.
+                 생성할 환경 이름.
    
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full path to environment prefix.
-   
+                 환경 접두어로의 경로.
+
           <B>-q</B>, <B>--quiet</B>
    
           <B>--force</B>
-                 force  creation  of  environment (removing a previously existing
-                 environment of the same name).
-   
-          <B>--json</B> Report all output as json. Suitable for using conda programmati-
-                 cally.
-   
+                 강제로 환경을 생성한다. (같은 이름을 갖는 기존 환경이 있으면 삭제한다.)
+
+          <B>--json</B> 모든 출력을 json으로 보고한다. 콘다를 프로그래머식으로 사용할 때 적합하다.
+
           <B>--debug</B>
-                 Show debug output.
-   
+                 디버그 출력을 본다.
+
           <B>--verbose</B>, <B>-v</B>
-                 Use once for info, twice for debug, three times for trace.
-   
-      <B>examples:</B>
+                 한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
+
+      <B>예시:</B>
                  conda  env  create  conda  env  create  <B>-n</B> name conda env create
                  vader/deathstar  conda  env  create  <B>-f=</B>/path/to/environment.yml
                  conda env create <B>-f=</B>/path/to/requirements.txt <B>-n</B> deathstar conda
