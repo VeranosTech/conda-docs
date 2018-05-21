@@ -1,11 +1,6 @@
-콘다 사용
-===========
+using/index_ko
+=================
 
-.. toctree::
+.. raw:: html
 
-   using_ko
-   envs_ko
-   /py2or3_ko
-   pkgs_ko
-   /r-with-conda_ko
-   /mro_ko
+        <html><head><meta http-equiv="refresh" content="0; URL='../user-guide/tasks/index_ko.html'" /></head><body></body></html>

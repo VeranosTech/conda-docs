@@ -1,10 +1,6 @@
-시작하기
-===========
+get-started_ko
+================
 
-.. toctree::
+.. raw:: html
 
-   intro_ko
-   download_ko
-   installation_ko
-   test-drive_ko
-   using/cheatsheet_ko
+        <html><head><meta http-equiv="refresh" content="0; URL='user-guide/index_ko.html'" /></head><body></body></html>

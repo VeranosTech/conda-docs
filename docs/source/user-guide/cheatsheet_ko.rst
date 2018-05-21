@@ -1,7 +1,6 @@
 ==================
-Cheat sheet
+치트 시트
 ==================
 
-See the :download:`conda cheat sheet <conda-cheatsheet.pdf>` PDF 
-(1 MB) for a single-page summary of the most important 
-information about using conda.
+:download:`콘다 치트 시트 <conda-cheatsheet.pdf>` pdf 파일 (1MB) 는 콘다를 사용함에 있어
+가장 중요한 정보들을 한 페이지에 요약해 놓은 문서이다.

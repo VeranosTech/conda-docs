@@ -1,14 +1,6 @@
-Help & reference
-================
+help/help_ko
+===============
 
-.. toctree::
-   :maxdepth: 1
+.. raw:: html
 
-   /using/cheatsheet_ko
-   /glossary_ko
-   /commands_ko
-   /faq_ko
-   /troubleshooting_ko
-   support
-   /changelog
-   /license_ko
+        <html><head><meta http-equiv="refresh" content="0; URL='../help-support_ko.html'" /></head><body></body></html>

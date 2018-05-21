@@ -122,17 +122,16 @@ allow_other_channels를 ``False``로 설정했을 때 사용자가 다른 채널
 기본 채널 (default_channels)
 -----------------------------------
 
-일반적으로 기본 레포지토리는 `repo.continuum.io <http:repo.continuum.io>`_\ 지만
-default_channels를 설정하면 새로운 기본 채널 목록이 지정된다.
+일반적으로 기본 채널은 `repo.continuum.io <http:repo.continuum.io>`_\ 에 있는
+여러 채널을 가리키지만, default_channels를 설정하면 새로운 기본 채널 목록이 지정된다.
 이 기능은 특히 에어갭(air gap)이나 엔터프라이즈 설치에 유용하다.
 
 .. code-block:: yaml
 
-  channels:
+  default_channels:
     - <anaconda_dot_org_username>
     - http://some.custom/channel
     - file:///some/local/directory
-    - defaults
 
 콘다 자동 업데이트 (auto_update_conda)
 ----------------------------------------------
@@ -379,9 +378,11 @@ channel_alias가 https://yourrepo.com 에 있는 레포지토리로 설정되면
 의존 요소 업데이트 비활성화 (update_dependencies)
 ------------------------------------------------------
 
-기본으로 ``conda install``\ 는 주어진 패키지와 모든 의존 요소를 최신 버전으로 업데이트한다.
+기본적으로 ``conda install``\ 는 주어진 패키지를 최신 버전으로 업데이트 하고,
+그 패키지에 대한 의존 요구사항들을 설치한다. 그러나 만약 패키지가 필요로 하는 의존 요소들이
+이미 설치돼 있다면, conda는 그 패키지들을 최신 버전으로 업데이트 하지 않는다.
 
-명령줄에 명시적으로 주어진 패키지만 업데이트하고 기존에 설치된 패키지의 업데이트는 가능한 한 막고 싶다면
+이런 경우에, conda가 모든 의존 요소를 환경과 호환가능한 최신버전으로 업데이트 하게 만들고 싶으면,
 update_dependencies를 ``True``\ 로 설정한다.
 
 .. code-block:: yaml
@@ -393,8 +394,6 @@ update_dependencies를 ``True``\ 로 설정한다.
 명령줄에 주어진 패키지가 최신 버전으로 업데이트되지 않을 수 있다.
 명령줄에 버전을 지정하면 언제든 ``conda install numpy=1.9.3``\ 와
 같이 주어진 버전의 패키지를 강제 설치할 수 있다.
-
-명령줄에 ``--update-dependencies``/ ``--no-update-dependencies`` 플래그를 추가하면 이 옵션을 활성화하거나 비활성화할 수 있다.
 
 환경의 특정 패키지의 업데이트만을 막고 싶다면 패키지를 고정하는 것이 나을 수 있다.
 자세한 정보는 :ref:`pinning-packages`\ 에 있다.

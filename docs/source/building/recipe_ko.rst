@@ -1,0 +1,6 @@
+building/recipe_ko
+======================
+
+.. raw:: html
+
+        <html><head><meta http-equiv="refresh" content="0; URL='../user-guide/tasks/build-packages/recipe_ko.html'" /></head><body></body></html>

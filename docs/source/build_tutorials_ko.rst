@@ -1,13 +1,6 @@
-=================
- 빌드 튜토리얼
-=================
+build_tutorials_ko
+====================
 
-.. toctree::
-   :maxdepth: 1
+.. raw:: html
 
-   build_tutorials/pkgs_ko
-   build_tutorials/pkgs2_ko
-   build_tutorials/postgis_ko
-   build_tutorials/windows_ko
-   build_tutorials/app_ko
-   build_tutorials/build_nltk_ko
+        <html><head><meta http-equiv="refresh" content="0; URL='user-guide/tutorials/index_ko.html'" /></head><body></body></html>

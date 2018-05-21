@@ -1,11 +1,6 @@
-============
-설치
-============
+installation_ko
+==================
 
-.. toctree::
-   :maxdepth: 2
+.. raw:: html
 
-   install/quick_ko
-   install/full_ko
-   config_ko
-   install/central_ko
+        <html><head><meta http-equiv="refresh" content="0; URL='user-guide/install/index_ko.html'" /></head><body></body></html>

@@ -55,16 +55,16 @@
 
 콘다를 사용하기 전에 새 배치 세션마다 PATH를 설정하고 콘다 패키지의 활성화 스크립트를 실행하기 위해 다음 명령을 사용한다. ::
 
-  source $HOME/miniconda3/bin/activate
+  source $HOME/miniconda/bin/activate
 
-주의: ``$HOME/miniconda3/bin/activate``\ 를 사용자의 콘다 설치의 활성화 스크립트 경로로 바꾼다.
+주의: ``$HOME/miniconda/bin/activate``\ 를 사용자의 콘다 설치의 활성화 스크립트 경로로 바꾼다.
 
 PATH를 지속적으로 설정하려면 ``.bashrc`` 파일에 줄을 추가한다.
 이 작업으로 활성화 스크립트를 실행하지 않고 콘다를 사용할 수 있게 되면 에러가 생길 수 있다.
 
 예시 ::
 
-  export PATH="$HOME/miniconda3/bin:$PATH"
+  export PATH="$HOME/miniconda/bin:$PATH"
 
 
 아나콘다/미니콘다 업데이트

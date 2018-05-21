@@ -1,5 +1,6 @@
-콘다 치트 시트
-=================
+using/cheatsheet_ko
+=====================
 
-:download:`콘다 치트 시트 <conda-cheatsheet.pdf>` pdf 파일 (1MB) 는 콘다를 사용함에 있어
-가장 중요한 정보들을 한 페이지에 요약해 놓은 문서이다.
+.. raw:: html
+
+        <html><head><meta http-equiv="refresh" content="0; URL='../user-guide/cheatsheet_ko.html'" /></head><body></body></html>

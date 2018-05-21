@@ -10,3 +10,4 @@
    admin-multi-user-install_ko
    enable-tab-completion_ko
    use-winxp-with-proxy_ko
+   disable-ssl-verification_ko

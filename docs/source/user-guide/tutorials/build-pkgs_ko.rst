@@ -77,7 +77,7 @@ meta.yaml 파일 편집하기
        git_url:
 
      requirements:
-       build:
+       host:
          - python
          - setuptools
 

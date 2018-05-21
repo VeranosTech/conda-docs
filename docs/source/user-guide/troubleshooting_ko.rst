@@ -1,6 +1,8 @@
 =================
-Troubleshooting
+ 트러블 슈팅
 =================
+
+목차:
 
 .. contents::
    :local:
@@ -8,462 +10,271 @@ Troubleshooting
 
 .. _permission-denied:
 
-Permission denied errors during installation
-=============================================
+문제:  설치 도중에 권한이 거부된 경우
+===============================================
 
-Cause
------
+umask 커맨드는 새로 생성된 파일의 권한이 어떻게 설정되는지 결정하는 mask 설정을 지정한다.
+만약 사용자가 077 과 같이 매우 제한적인 umask 값을 갖는다면 "권한 거부" 에러가 나타날 수 있다.
 
-The ``umask`` command  determines the mask settings that control
-how file permissions are set for newly created files. If you
-have a very restrictive ``umask``, such as ``077``, you get
-"permission denied" errors.
+해결책:  콘다 커맨드를 호출하기 전에 덜 제한적인 umask 를 설정한다.
+----------------------------------------------------------------------
 
-Solution
------------
+콘다는 사용자 영역 툴로 고안되었지만 사용자는 때때로 전역 환경에서 콘다를 사용해야 한다.
+제한적인 파일 권한이 설정되어 있을 때가 이에 해당한다.
+콘다는 시스템의 다른 사용자에 의해 읽혀야 하는 파일을 설치할 때 링크를 생성한다.
 
-Set a less restrictive ``umask`` before calling conda commands.
-Conda was intended as a user space tool, but often users need to
-use it in a global environment. One place this can go awry is
-with restrictive file permissions.  Conda creates links when you
-install files that have to be read by others on the system.
-
-To give yourself full permissions for files and directories, but
-prevent the group and other users from having access:
-
-#. Before installing, set the ``umask`` to ``007``.
-
-#. Install conda.
-
-#. Return the ``umask`` to the original setting:
+사용자 스스로가 파일과 디렉토리에 대한 전체 권한을 가지면서 다른 사용자가 접근하는걸 막고 싶다면
+설치하기 전에 umask 를 007 로 설정하고 콘다를 설치한다. 그리고 umask 를 원래 값으로 되돌리면 된다. 아래와 같이:
 
    .. code-block:: bash
 
-      umask 007
-      conda install
-      umask 077
+      $ umask 007
+      $ conda install
+      $ umask 077
 
 
-For more information on ``umask``, see
-`http://en.wikipedia.org/wiki/Umask <http://en.wikipedia.org/wiki/Umask>`_.
-
-.. _permission-denied-sudo:
-
-Permission denied errors after using sudo conda command
-=======================================================
-
-Solution
---------
-
-Once you run conda with sudo, you must use sudo forever. We recommend that you NEVER run conda with sudo.
-
+umask 에 대한 자세한 정보는 `http://en.wikipedia.org/wiki/Umask <http://en.wikipedia.org/wiki/Umask>`_ 를 방문하라.
 
 .. _fix-broken-conda:
 
-Already installed error message
-================================
+문제: 콘다가 손상되었고 현재의 설치를 날리지 않고 고치고자 하는 경우
+============================================================================================
 
-Cause
-------
+콘다 에러를 겪고 있고 미니콘다를 재설치해 해결하고자 한다. 하지만 이를 시도했을 때
+미니콘다(또는 아나콘다)가 이미 설치되어 있기 때문에 더 진행할 수 없다는 에러가 나타났다.
+설치를 강제하고자 한다.
 
-If you are trying to fix conda problems without removing the
-current installation and you try to reinstall Miniconda or
-Anaconda to fix it, you get an error message that Miniconda
-or Anaconda is already installed, and you cannot continue.
+해결책: -f (force) 옵션을 사용해 미니콘다를 설치한다.
+---------------------------------------------------------
 
-Solution
-----------
-
-Install using the --force option.
-
-
-Download and install the appropriate Miniconda
-for your operating system from the `Miniconda download page
-<https://conda.io/miniconda.html>`_ using the force option
-``--force`` or ``-f``:
+`Miniconda download page <https://conda.io/miniconda.html>`_ 에서 사용자의 컴퓨터 운영체제에 맞는
+미니콘다를 다운 받아 설치할 수 있다. 아래와 같이 ``-f`` 옵션으로 설치를 강제한다.:
 
 .. code-block:: bash
 
     bash Miniconda3-latest-MacOSX-x86_64.sh -f
 
-NOTE: Substitute the appropriate filename and version for your
-operating system.
+주의: 적절한 파일명과 운영체제에 맞는 버전으로 대체한다.
 
-NOTE: Be sure that you install to the same install location as
-your existing install so it overwrites the core conda files and
-does not install a duplicate in a new folder.
+주의: 현재 설치된 곳과 동일한 경로에 설치하여 코어 콘다 파일을 덮어쓰고 새로운 폴더에 사본을 설치하지 않아야 한다.
 
 
 .. _conda-claims-installed:
 
-Conda reports that a package is installed, but it appears not to be
-===================================================================
+문제: 콘다에 이미 설치된 패키지라고 나오지만 존재하지 않는 경우
+=========================================================================
 
-Sometimes conda claims that a package is already installed, but
-it does not appear to be, for example, a Python package that
-gives ImportError.
+종정 콘다가 이미 설치된 패키지라고 하지만 존재하지 않을 수 있다.
+예를 들어 파이썬 패키지라면 ImportError 가 나타난다.
 
-There are several possible causes for this problem, each with its
-own solution.
+이러한 문제의 원인이 될 수 있는 것이 몇가지 있다.:
 
-Cause
-------
+해결책: 패키지와 동일한 콘다 환경에 있는지 확인한다.
+---------------------------------------------------------------------------
 
-You are not in the same conda environment as your package.
+``conda info`` 는 현재 어떤 환경이 활성화 되었는지 알려준다. ("디폴트 환경"에서)
+아래와 같이 실행하면 파이썬을 올바른 환경에서 사용하고 있는지 확인할 수 있다.:
 
-Solution
------------
+.. code:: python
 
-#. Make sure that you are in the same conda environment as your
-   package. The ``conda info`` command tells you what environment
-   is currently active---under ``default environment``.
+   import sys
+   print(sys.prefix)
 
-#. Verify that you are using the Python from the correct
-   environment by running:
+해결책: 파이썬 패키지라면 ``PYTHONPATH`` 또는 ``PYTHONHOME`` 변수를 설정하지 않았는지 확인한다.
+---------------------------------------------------------------------------------------------------------
 
-   .. code:: python
+``conda info -a`` 커맨드는 위 환경 변수값들을 알려준다.
 
-      import sys
-      print(sys.prefix)
+위 환경 변수들은 파이썬이 표준 경로가 아닌 다른 곳에서 파일을 불러오게 한다.
+위 변수들의 활용 사례들은 대부분 콘다 환경에는 해당하지 않는다. 위 환경 변수들이 설정되지 않았을 때 콘다가 가장 잘 작동한다.
+또한 위 환경 변수들로 인해 파이썬이 잘못된 버전 또는 손상된 라이브러리 버전을 가져오는 것이 일반적으로 발생하는 문제이다.
 
+현재 터미널 세션에서 위 변수들을 일시적으로 취소하려면 ``unset PYTHONPATH`` 를 실행한다.
+영구적으로 취소하고 싶다면 bash 에서는 ``~/.bashrc``, ``~/.bash_profile``, ``~/.profile`` 파일,
+zsh 에서는  ``~/.zshrc`` 파일, 윈도우의 PowerShell 에서는 ``$PROFILE`` 의 파일 출력 내부의 라인을 확인하자.
 
-Cause
-------
-For Python packages, you have set the PYTHONPATH or PYTHONHOME
-variable. These environment variables cause Python to load files
-from locations other than the standard ones. Conda works best
-when these environment variables are not set, as their typical
-use cases are obviated by conda environments and a common issue
-is that they cause Python to pick up the wrong versions or broken
-versions of a library.
+해결책: 파이썬 패키지라면, 모든 위치 특정 디렉토리를 제거한다.
+---------------------------------------------------------------------
 
+문제가 파이썬 패키지일 경우에 위치 특정 파일로 인한 문제일 수 있다.
+일반적으로 위치 특정 파일은 유닉스 운영체제의 ``~/.local`` 디렉토리에 위치한다.
+사이트 특정 패키지에 대한 완전한 기술은 `PEP 370 <http://legacy.python.org/dev/peps/pep-0370/>`_ 를 보자.
+``PYTHONPATH`` 가 설정된 것과 같이 파이썬이 ``~/.local``  디렉토리로부터 패키지를 가져오면서
+위와 같은 문제가 나타날 수 있다. 권장하는 해결책은 위치 특정 디렉토리를 삭제하는 것이다.
 
-Solution
---------------
+해결책: C 라이브러리라면, 리눅스의 ``LD_LIBRARY_PATH``, OS X의 ``DYLD_LIBRARY_PATH`` 환경변수를 재설정한다.
+---------------------------------------------------------------------------------------------------------------------------
 
-For Python packages, make sure you have not set the PYTHONPATH
-or PYTHONHOME variables. The command ``conda info -a`` displays
-the values of these environment variables.
+이 환경 변수들은 파이썬의 ``PYTHONPATH`` 와 유사한 기능을 한다. 변수가 설정되어 있으면
+라이브러리를 콘다 환경으로부터 가져오지 않고 변수에 지정된 위치로부터 로드한다.
+파이썬에서와 같이 위 환경 변수들의 활용 사례들은 대부분 콘다 환경에는 해당하지 않는다.
+따라서 이 변수들이 설정되어 있다면 재설정 하는 것을 권장한다.
+``conda info -a`` 커맨드로 이 변수들이 어떻게 설정되어 있는지 확인할 수 있다.
+(관련 운영체제 상에.)
 
-* To unset these environment variables temporarily for the
-  current Terminal session, run ``unset PYTHONPATH``.
+Resolution: 때때로 설치된 패키지에 오류가 생길 수 있다.
+--------------------------------------------------------------------
 
-* To unset them permanently, check for lines in the files:
+콘다는 패키지 디렉토리의 패키지를 풀고 이를 환경과 하드 링크함으로써 작동한다.
+종종 왜인지 이 과정이 충돌하고 패지지를 사용하는 모든 환경을 망가뜨린다.
+동일한 파일들이 매번 하드 링크되기 때문에 추가적인 환경도 문제가 생길 수 있다.
 
-  * If you use bash---``~/.bashrc``, ``~/.bash_profile``,
-    ``~/.profile``.
-
-  * If you use zsh---`~/.zshrc``.
-
-  * If you use PowerShell on Windows, the file output by
-    ``$PROFILE`` .
-
-
-Cause
-------
-
-You have site-specific directories or, for Python, you have
-so-called site-specific files. These are typically located in
-``~/.local`` on Linux and macOS. For a full description of the locations of
-site-specific packages, see `PEP 370
-<http://legacy.python.org/dev/peps/pep-0370/>`_.  As with
-PYTHONPATH, Python may try importing packages from this
-directory, which can cause issues.
-
-Solution
---------------
-
-For Python packages, remove site-specific directories and
-site-specific files.
-
-Cause
-------
-
-For C libraries, the following environment variables have been
-set:
-
-* macOS---DYLD_LIBRARY_PATH.
-* Linux---LD_LIBRARY_PATH.
-
-These act similarly to ``PYTHONPATH`` for Python. If they are
-set, they can cause libraries to be loaded from locations other
-than the conda environment. Conda environments obviate most use
-cases for these variables. The command ``conda info -a`` shows
-what these are set to.
-
-Solution
------------
-
-Unset DYLD_LIBRARY_PATH or LD_LIBRARY_PATH.
-
-
-Cause
-------
-
-Occasionally, an installed package becomes corrupted. Conda works
-by unpacking the packages in the ``pkgs`` directory and then
-hard-linking them to the environment. Sometimes these get
-corrupted, breaking all environments that use them, and also any
-additional environments, since the same files are hard-linked
-each time.
-
-
-Solution
-----------
-
-Run the command ``conda install -f`` to unarchive the package
-again and relink it. It also does an md5 verification on the
-package. Usually if this is different, it is because your
-channels have changed and there is a different package with the
-same name, version, and build number.
-
-NOTE: This breaks the links to any other environments that
-already had this package installed, so you have to reinstall it
-there, too. It also means that running ``conda install -f`` a lot
-can use up a lot of disk space if you have a lot of environments.
-
-NOTE: The ``-f`` flag to ``conda install`` (``--force``) implies
-``--no-deps``, so ``conda install -f package`` does not reinstall
-any of the dependencies of ``package``.
-
+**conda install -f 커맨드는 패기지를 보관 해제하고 다시 링크한다.**
+이 커맨드는 패키지에 md5 검증을 실행한다. (보통 md5 검증이 다르게 나타난다면
+사용자의 채널이 변경되었고 동일한 명칭, 버전, 빌드 번호를 갖는 다른 패키지가 존재하기 때문이다.)
+이 때 이미 이 패키지를 설치한 모든 환경으로의 링크가 망가지기 때문에 기존 환경에도 패키지를 다시 설치해 주어야 한다.
+환경의 갯수가 많아 ``conda install -f`` 를 여러번 실행해야 한다면
+이는 많은 디스크 용량을 사용해야 함을 의미한다. ``conda install`` 를 강제하는 ``-f`` 플래그는
+``--no-deps`` 를 내포하고 있으므로 ``conda install -f package`` 는 패키지의 하위 요소는 재설치하지 않는다.
 
 .. _DistributionNotFound:
 
-pkg_resources.DistributionNotFound: conda==3.6.1-6-gb31b0d4-dirty
-=================================================================
+문제: pkg_resources.DistributionNotFound: conda==3.6.1-6-gb31b0d4-dirty
+========================================================================
 
-Cause
-------
+해결책: 콘다 강제 재설치
+---------------------------------
 
-The local version of conda needs updating.
+콘다 개발 버전을 사용하기에 유용한 방법은 `콘다 git 저장소 <https://github.com/conda/conda>`_ 의 체크아웃으로
+``python setup.py develop`` 커맨드를 실행하는 것이다. 콘다의 정기 업데이트를 받지 못하기 때문에
+``git pull`` 을 자주 사용하지 않는다면 un-develop 하는 것이 나을 수 있다.
+일반적인 방법으로는 ``python setup.py develop -u`` 를 실행한다..
 
-Solution
-----------
+그러나 이 커맨드는 ``conda`` 스크립트 자체를 대체하진 않는다.
+``conda`` 를 사용헤 다른 패키지들을 재설치 할 수 있기 때문에 그리 중요한 일은 아니지만
+콘다가 설치되었다면 ``conda`` 는 사용할 수 없다.
 
-Force reinstall conda. A useful way to work off the development
-version of conda is to run ``python setup.py develop`` on a
-checkout of the `conda git repository
-<https://github.com/conda/conda>`_. However, if you are not
-regularly running ``git pull``, it is a good idea to un-develop,
-as you will otherwise not get any regular updates to conda. The
-normal way to do this is to run ``python setup.py develop -u``.
-
-However, this command does not replace the ``conda`` script
-itself. With other packages, this is not an issue, as you can
-just reinstall them with ``conda``, but conda cannot be used if
-conda is installed.
-
-The fix is to use the ``./bin/conda`` executable in the conda
-git repository to force reinstall conda, that is, run
-``./bin/conda install -f conda``.  You can then verify with
-``conda info`` that you have the latest version of conda, and not
-a git checkout---the version should not include any hashes.
-
+해결책은 콘다 git 저장소에서 ``./bin/conda`` 실행을 사용해 콘다를 강제 재설치 하는 것이다.
+``./bin/conda install -f conda`` 커맨드와 같이 하면 된다.
+콘다가 최신 버전인지는 ``conda info`` 로 확인할 수 있고 git 체크아웃으로는 불가능하다.
+(버전은 어떤 해시도 포함해선 안된다.)
 
 .. _unknown-locale:
 
-macOS error "ValueError unknown locale: UTF-8"
-===============================================
+문제: OS X 에서 ``ValueError unknown locale: UTF-8``
+===================================================
 
-Cause
-------
+해결책: 터미널 설정에서 "set locale environment variables on startup" 설정을 해제한다.
+----------------------------------------------------------------------------------------------
 
-This is a bug in the macOS Terminal app that shows up only in
-certain locales. Locales are country-language combinations.
+이는 OS X 터미널 어플리케이션의 버그로 특정 로케일에서만 나타난다. (지역/언어의 조합)
+/Applications/Utilities 에서 터미널을 열고 "Set locale environment variables on startup" 박스의 체크를 해제한다.
 
+.. image:: help/locale.jpg
 
-Solution
----------
-
-#. Open Terminal in ``/Applications/Utilities``
-
-#. Clear the Set locale environment variables on startup checkbox.
-
-   .. figure:: /img/conda_locale.jpg
-
-      ..
-
-   |
-
-This sets your LANG environment variable to be empty. This may
-cause Terminal use to incorrect settings for your locale. The
-``locale`` command in Terminal tells you what settings are used.
-
-To use the correct language, add a line to your bash profile,
-which is typically ``~/.profile``:
+이 방법은 ``LANG`` 환경 변수를 비우게 되고 터미널이 사용자의 로케일에 맞지 않는 설정을 사용하게 할 수 있다.
+터미널의 ``locale`` 커맨드는 어떤 설정이 사용되고 있는지 보여준다.
+올바른 언어를 사용하기 위해 bash 프로파일에 라인을 추가한다. (일반적으로 ``~/.profile``)
 
 .. code-block:: bash
 
    export LANG=your-lang
 
-NOTE: Replace ``your-lang`` with the correct locale specifier for
-your language.
-
-The command ``locale -a`` displays all the specifiers. For
-example, the language code for US English is ``en_US.UTF-8``. The
-locale affects what translations are used when they are available
-and also how dates, currencies and decimals are formatted.
+``your-lang`` 을 사용자의 언어에 알맞은 로케일 지정자로 대체한다.
+``locale -a`` 는 모든 지정자를 보여준다. 예를 들어, 언어 코드 US English는 ``en_US.UTF-8`` 이다.
+로케일은 변환이 가능할 때 사용될 변환과 날짜, 통화, 십진법이 포맷되는 방식에 영향을 준다.
 
 
 .. _AttributeError-getproxies:
 
-AttributeError or missing getproxies
-====================================
+문제: ``AttributeError`` 또는 ``getproxies`` 누락
+===================================================
 
-When running a command such as ``conda update ipython``, you may
-get an ``AttributeError: 'module' object has no attribute
-'getproxies'``.
+``conda update ipython`` 와 같은 커맨드를 실행할 때,
+``AttributeError: 'module' object has no attribute 'getproxies'`` 를 볼 수 있다.
 
-Cause
-------
+해결책: ``requests`` 를 업데이트하고 ``PYTHONPATH`` 가 지정되지 않았는지 확인한다.
+---------------------------------------------------------------------
 
-This can be caused by an old version of ``requests`` or by having
-the ``PYTHONPATH`` environment variable set.
+구버전의 ``requests`` 또는 ``PYTHONPATH`` 환경 변수가 설정되었을 때 나타나는 문제이다.
 
-Solution
---------
+``conda info -a`` 는 ``requests`` 버전과 ``PYTHONPATH`` 같은 다양한 환경 변수를 보여준다.
 
-Update ``requests`` and be sure ``PYTHONPATH`` is not set:
+``requests`` 버전은 ``pip install -U requests`` 로 업데이트 할 수 있다.
 
-#. Run ``conda info -a`` to show the ``requests`` version and
-   various environment variables such as ``PYTHONPATH``.
-
-#. Update the ``requests`` version with
-   ``pip install -U requests``.
-
-#. Clear ``PYTHONPATH``:
-
-   * On Windows, clear it the environment variable settings.
-
-   * On macOS and Linux, clear it by removing it from the bash
-     profile and restarting the shell.
+윈도우 ``PYTHONPATH`` 는 환경 변수 설정에서 취소할 수 있다.
+OS X 와 리눅스는 bash 프로파일에서 제거하거나 쉘을 다시 시작함으로써 취소한다.
 
 
 .. _shell-command-location:
 
-Shell commands open from the wrong location
-===========================================
+문제:  잘못된 위치에서 쉘 커맨드 사용
+===============================================
 
-When you run a command within a conda environment, conda does not
-access the correct package executable.
+콘다 환경에서 커맨드를 실행할 때 콘다가 올바른 패키지 실행 파일에 접근하지 못한다.
 
-Cause
--------
+해결책:  환경을 재활성화 하거나 ``hash -r`` (bash) 또는 ``rehash`` (zsh) 를 실행한다.
+-------------------------------------------------------------------------------------------
 
-In both bash and zsh, when you enter a command, the shell
-searches the paths in PATH one by one until it finds the command.
-The shell then caches the location, which is called hashing in
-shell terminology. When you run command again, the shell does not
-have to search the PATH again.
+bash 와 zsh 모두 커맨드를 입력하면 쉘은 커맨드를 찾을 때까지 ``PATH`` 의 경로들을 일일이 검색한다.
+일단 커맨드를 찾으면 동일한 커맨드가 입력되었을 때 ``PATH`` 경로를 다시 검색하지 않도록
+커맨드 위치를 캐싱한다. 이를 쉘 용어로 해싱(hashing) 이라 한다.
 
-The problem is that before you installed the program, you ran a command which
-loaded and hashed another version of that program in some other location on
-the PATH, such as ``/usr/bin``. Then you installed the program
-using ``conda install``, but the shell still had the old instance
-hashed.
+문제는 콘다가 프로그램을 설치하기 전에 ``PATH`` 상의 다른 위치에 있는 것을 해시 한 커맨드를 실행했을 때이다.
+이 때 ``conda install`` 를 사용해 프로그램을 설치해도 쉘은 여전히 이전에 해시한 것을 가지고 있다.
 
+``source activate`` 를 실행하면 콘다는 자동으로 ``hash -r`` (bash) 또는 ``rehash`` (zsh) 를 실행해
+해시된 커맨드를 삭제해 콘다가 ``PATH`` 상의 새로운 경로를 검색하게 한다.
+그러나 ``conda install`` 가 실행 되었을 때는 기존 해시를 삭제할 방법이 없다.
+(커맨드는 반드시 쉘 내부에서 자체적으로 실행되어야 한다. 이는 커맨드를 직접 작성하거나 커맨드를 포함하는 파일을 가져와야 한다는 것을 의미한다.)
 
-Solution
----------
+이 문제는 사용자가 환경을 활성화 하거나 루트 환경을 사용할 때만 발생하므로 상대적으로 드문 문제이다.
+어딘가로부터 커맨드를 실행하면 콘다는 프로그램을 설치하고 이를 다시 실행할 때는
+``source activate`` 나 ``source deactivate`` 없이 프로그램을 실행하려 한다.
 
-Reactivate the environment or run ``hash -r`` (in bash) or
-``rehash`` (in zsh).
-
-When you run ``source activate``, conda automatically runs
-``hash -r`` in bash and ``rehash`` in zsh to clear the hashed
-commands, so conda finds things in the new path on the PATH. But
-there is no way to do this when ``conda install`` is run because
-the command must be run inside the shell itself, meaning either
-you have to run the command yourself or use source a file that
-contains the command.
-
-This is a relatively rare problem, since this happens only in the
-following circumstances:
-
-#. You activate an environment or use the root environment, and
-   then run a command from somewhere else.
-
-#. Then you conda install a program, and then try to run the
-   program again without running ``activate`` or
-   ``deactivate``.
-
-The command ``type command_name`` always tells you exactly what
-is being run. This is better than ``which command_name``, which
-ignores hashed commands and searches the PATH directly.
-The hash is reset by ``source activate``, or by ``hash -r`` in bash or
-``rehash`` in zsh.
-
+``type command_name`` 커맨드는 항상 무엇이 실행되고 있는지를 정확히 보여준다.
+그러한 점에서 해시된 커맨드를 무시하고 ``PATH`` 를 바로 검색하는 ``which command_name`` 커맨드보다 낫다.
+``hash -r`` (bash) 또는 ``rehash`` (zsh) 는 해시를 재설정한다. ``source activate`` 를 사용해도 된다.
 
 .. _wrong-python:
 
-Programs fail due to invoking conda Python instead of system Python
-===================================================================
+문제:  프로그램이 시스템 파이썬이 아닌 콘다 파이썬을 호출해 발생하는 문제
+========================================================================
 
-Cause
-------
+파이썬을 실행하는 프로그램은 이전엔 시스템 파이썬을 호출하지만 아나콘다 또는 미니콘다를 설치하면
+루트 콘다 환경에서 파이썬을 호출한다. 따라서 루트 콘다 환경에 없는 특정 설정이나 하위 요소로 인해
+시스템 파이썬에 의존하는 프로그램은 충돌할 수 있다. 예를 들어 리눅스 민트의 Cinnamon 데스크탑 환경
+사용자는 이러한 충돌을 경험한다.
 
-After installing Anaconda or Miniconda, programs that run
-``python`` switch from invoking the system Python to invoking the
-Python in the root conda environment. If these programs rely on
-the system Python to have certain configurations or dependencies
-that are not in the root conda environment Python, the programs
-may crash. For example, some users of the Cinnamon desktop
-environment on Linux Mint have reported these crashes.
+해결책: ``PATH`` 변수를 수정한다.
+-------------------------------------------------
 
+``.bash_profile`` 과 ``.bashrc`` 파일을 수정해 ``~/miniconda3/bin`` 같은
+콘다 바이너리 디렉토리가 ``PATH`` 환경 변수에 추가되지 않도록 한다.
+``~/miniconda3/bin/conda`` 처럼 전체 경로을 사용하면
+``conda`` ``activate`` 와 ``deactivate`` 가 여전히 실행중일 수 있다.
 
-Solution
----------
+심볼릭 링크로 ``conda`` ``activate`` 와 ``deactivate`` 로의 폴더를 만들고
+사용자의 ``.bash_profile`` 또는 ``.bashrc`` 을 수정해 생성된 폴더를 ``PATH`` 에 추가할 수 있다.
+이제 파이썬을 실행하면 시스템 파이썬을 불러오지만 콘다 커맨드를 실행해
+``source activate MyEnv``, ``source activate root``, ``source deactivate`` 는 정상적으로 작동한다.
 
-Edit your ``.bash_profile`` and ``.bashrc`` files so that the
-conda binary directory, such as ``~/miniconda3/bin``, is no
-longer added to the PATH environment variable. You can still run
-``conda`` ``activate`` and ``deactivate`` by using their full
-path names, such as ``~/miniconda3/bin/conda``.
-
-You may also create a folder with symbolic links to ``conda``,
-``activate`` and ``deactivate``, and then edit your
-``.bash_profile`` or ``.bashrc`` file to add this folder to your
-PATH. If you do this, running ``python`` will invoke the system
-Python, but running ``conda`` commands, ``source activate MyEnv``,
-``source activate root``, or ``source deactivate`` will work
-normally.
-
-After running ``source activate`` to activate any environment,
-including after running ``source activate root``, running
-``python`` will invoke the Python in the active conda environment.
-
+``source activate`` 를 실행해 어떤 환경을 활성화 하고 (``source activate root`` 포함)
+파이썬을 실행하면 활성화된 콘다 환경으로부터 파이썬을 불러온다.
 
 .. _unsatisfiable:
 
-UnsatisfiableSpecifications error
-====================================
+문제: ``UnsatisfiableSpecifications`` 에러
+============================================
 
-Cause
--------
+모든 콘다 설치 사양을 만족시키지 못한 경우
 
-Some conda package installation specifications are impossible to
-satisfy. For example, ``conda create -n tmp python=3 wxpython=3``
-produces an "Unsatisfiable Specifications" error because wxPython
-3 depends on Python 2.7, so the specification to install Python 3
-conflicts with the specification to install wxPython 3.
+예를 들어, ``conda create -n tmp python=3 wxpython=3`` 는 ``UnsatisfiableSpecifications`` 에러를 야기한다.
+이는 wxPython 3 가 파이썬 2.7에 의존해 파이썬 3를 설치하기 위한 사양과 wxPython 3의 사양이 충돌하기 때문이다.
 
-When an unsatisfiable request is made to conda, conda shows a
-message such as this one::
+해결책: 설치 요청에서 충돌을 해결한다.
+---------------------------------------------------------
+
+콘다에 부적절한 요청이 들어오면 콘다는 아래와 같은 메시지를 보여준다.::
 
     The following specifications were found to be in conflict:
     - python 3*
     - wxpython 3* -> python 2.7*
     Use "conda info <package>" to see the dependencies for each package.
 
-This indicates that the specification to install wxpython 3
-depends on installing Python 2.7, which conflicts with the
-specification to install python 3.
+위 메시지는 wxpython 3 의 설치 사양이 Python 2.7 설치에 의존해 파이썬 3를 위한 설치 사양과 충돌함을 알려준다.
 
-Solution
-----------
-
-Use "conda info wxpython" or "conda info wxpython=3" to show
-information about this package and its dependencies::
+"conda info wxpython" 또는 "conda info wxpython=3" 을 사용해 패키지와 하위 요소에 대한 정보를 볼 수 있다.::
 
     wxpython 3.0 py27_0
     -------------------
@@ -485,49 +296,30 @@ information about this package and its dependencies::
         python 2.7*
         python.app
 
-
-By examining the dependencies of each package, you should be able
-to determine why the installation request produced a conflict and
-modify the request so it can be satisfied without conflicts. In
-this example, you could install wxPython with Python 2.7::
+각각의 패키지의 하위 요소들을 보면 설치 요청이 충돌한 이유를 알 수 있을 것이다.
+이제 이를 만족시켜 충돌을 해결하면 된다. 이번 예시에서는 wxPython 을 파이썬 2.7과 설치하면 된다.::
 
     conda create -n tmp python=2.7 wxpython=3
 
-
 .. _version-from-channel:
 
-Package installation fails from a specific channel
-====================================================
+문제: 채널로부터 특정 버전을 설치하는 경우
+===============================================
 
-Cause
--------
-
-Sometimes it is necessary to install a specific version from a
-specific channel because that version is not available from the
-default channel.
-
-
-Solution
----------
-
-The following example describes the problem in detail and its
-solution.
-
-Suppose you have a specific need to install the Python
-``cx_freeze`` module with Python 3.4. A first step is to create a
-Python 3.4 environment:
+파이썬 3.4와 파이썬 ``cx_freeze`` 모듈을 설치할 필요가 있을 수 있다.
+먼저 파이썬 3.4 환경을 생성한다.:
 
 .. code-block:: bash
 
    conda create -n py34 python=3.4
 
-Using this environment you should first attempt:
+이 환경을 사용해 첫번째 시도를 한다.:
 
 .. code-block:: bash
 
    conda install -n py34 cx_freeze
 
-However, when you do this you get the following error::
+그러나 위 코드 블럭을 실행했을 때 아래와 같은 에러가 나타날 수 있다. (사용중인 플랫폼에서 위 코드가 작성됐을 때)::
 
    Using Anaconda Cloud api site https://api.anaconda.org
    Fetching package metadata .........
@@ -539,10 +331,8 @@ However, when you do this you get the following error::
 
      anaconda search -t conda cx_freeze
 
-The message indicates that ``cx_freeze`` cannot be found in the
-default package channels. However, there may be a
-community-created version available and you can search for it by
-running the following command:
+위 에러는 ``cx_freeze`` 를 찾을 수 없고 최소한 *디폴트* 패키지 채널엔 없다는 의미이다. 그러나 커뮤티니 생성 버전 중 사용 가능한 것이 있을 수 있다.
+그렇다면 위에 나열된 정확한 커맨드로 유효한 버전을 찾으면 된다.
 
 .. code-block:: bash
 
@@ -560,26 +350,15 @@ running the following command:
         takluyver/cx_freeze       |    4.3.3 | conda           | linux-64
    Found 4 packages
 
+위 예시에서 우리가 시도할 수 있는 네가지 ``cx_freeze`` 가 있다.
+모두 공식 지원이 아니거나 Continuum 에 승인되지 않았지만 콘다 커뮤니티의 구성원들이 여러 귀중한 패키지를 제공한다.
+여론을 참고하고 싶다면 `웹 인터페이스 <https://anaconda.org/search?q=cx_freeze>`_ 에 추가 정보가 제공된다.
 
-In this example, there are 4 different places that you could try
-to get the package. None of them are officially supported or
-endorsed by Anaconda, but members of the conda community have
-provided many valuable packages. If you want to go with public
-opinion, then `the web interface
-<https://anaconda.org/search?q=cx_freeze>`_ provides more
-information:
-
-.. figure:: /img/conda_package-popularity.png
+.. figure:: images/package-popularity.png
    :alt: cx_freeze packages on anaconda.org
 
-   ..
-
-|
-
-Notice that the ``pyzo`` organization has by far the most
-downloads, so you might choose to use their package. If so, you
-can add their organization's channel by specifying it on the
-command line:
+``pyzo`` 의 ``cx_freeze`` 가 가장 많이 다운로드 되었고 이 패키지를 선택해도 된다.
+아래와 같이 커맨드 라인에 ``pyzo`` 의 채널을 명시하면 된다.:
 
 .. code-block:: bash
 
@@ -613,9 +392,8 @@ command line:
        xz:         5.0.5-1
        zlib:       1.2.8-0
 
+이제 파이썬 3.4와 ``cx_freeze`` 로 생성된 소프트웨어 환경 샌드박스를 만들었다.
 
-Now you have a software environment sandbox created with Python
-3.4 and ``cx_freeze``.
 
 
 .. _auto-upgrade:
@@ -658,4 +436,3 @@ Solution
 ---------
 
 See https://github.com/conda/conda/issues/6096.
-
