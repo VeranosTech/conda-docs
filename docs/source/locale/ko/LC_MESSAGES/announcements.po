@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conda  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"POT-Creation-Date: 2018-12-11 11:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,5 +19,5 @@ msgstr ""
 
 #: ../../source/announcements.rst:2
 msgid "announcements"
-msgstr ""
+msgstr "공지 사항"
 

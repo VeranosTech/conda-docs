@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conda  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"POT-Creation-Date: 2018-12-11 11:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,15 @@ msgstr ""
 
 #: ../../source/help-support.rst:3
 msgid "Help and support"
-msgstr ""
+msgstr "도움말과 지원"
 
 #: ../../source/help-support.rst:5
 msgid ""
 "Get free community support with our `Google group "
 "<https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_."
 msgstr ""
+"구글 그룹 <https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_\ 에서 "
+"무료 커뮤니티 지원을 받을 수 있다."
 
 #: ../../source/help-support.rst:8
 msgid ""
