@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/commands.rst:3
+msgid "Command reference"
+msgstr ""
+
+#: ../../source/commands.rst:9
+msgid ""
+"Conda provides many commands for managing packages and environments. The "
+"links on this page provide help for each command. You can also access "
+"help from the command line with the ``--help`` flag:"
+msgstr ""
+
+#: ../../source/commands.rst:20
+msgid "Conda general commands"
+msgstr ""
+
+#: ../../source/commands.rst:22
+msgid "The following commands are part of conda:"
+msgstr ""
+
+#: ../../source/commands.rst:31
+msgid "Conda build commands"
+msgstr ""
+
+#: ../../source/commands.rst:33
+msgid ""
+"The following commands are part of the conda build package, which can be "
+"installed with ``conda install conda-build``:"
+msgstr ""
+
+#: ../../source/commands.rst:43
+msgid "Conda environment commands"
+msgstr ""
+
+#: ../../source/commands.rst:45
+msgid ""
+"The following commands are part of the conda-env package, which is "
+"installed automatically with conda:"
+msgstr ""
+
+#: ../../source/commands.rst:55
+msgid "Conda vs. pip vs. virtualenv commands"
+msgstr ""
+
+#: ../../source/commands.rst:57
+msgid ""
+"If you have used pip and virtualenv in the past, you can use conda to "
+"perform all of the same operations. Pip is a package manager, and "
+"virtualenv is an environment manager. Conda is both."
+msgstr ""
+
+#: ../../source/commands.rst:62
+msgid "Task"
+msgstr ""
+
+#: ../../source/commands.rst:62
+msgid "Conda package and environment manager command"
+msgstr ""
+
+#: ../../source/commands.rst:62
+msgid "Pip package manager command"
+msgstr ""
+
+#: ../../source/commands.rst:62
+msgid "Virtualenv environment manager command"
+msgstr ""
+
+#: ../../source/commands.rst:64
+msgid "Install a package"
+msgstr ""
+
+#: ../../source/commands.rst:64
+msgid "``conda install $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:64
+msgid "``pip install $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:64 ../../source/commands.rst:65
+#: ../../source/commands.rst:66 ../../source/commands.rst:67
+#: ../../source/commands.rst:68 ../../source/commands.rst:69
+#: ../../source/commands.rst:70 ../../source/commands.rst:71
+#: ../../source/commands.rst:72 ../../source/commands.rst:73
+#: ../../source/commands.rst:74 ../../source/commands.rst:75
+#: ../../source/commands.rst:76 ../../source/commands.rst:77
+#: ../../source/commands.rst:78
+msgid "X"
+msgstr ""
+
+#: ../../source/commands.rst:65
+msgid "Update a package"
+msgstr ""
+
+#: ../../source/commands.rst:65
+msgid "``conda update --name $ENVIRONMENT_NAME $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:65
+msgid "``pip install --upgrade $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:66
+msgid "Update package manager"
+msgstr ""
+
+#: ../../source/commands.rst:66
+msgid "``conda update conda``"
+msgstr ""
+
+#: ../../source/commands.rst:66
+msgid "Linux/macOS: ``pip install -U pip`` Win: ``python -m pip install -U pip``"
+msgstr ""
+
+#: ../../source/commands.rst:67
+msgid "Uninstall a package"
+msgstr ""
+
+#: ../../source/commands.rst:67
+msgid "``conda remove --name $ENVIRONMENT_NAME $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:67
+msgid "``pip uninstall $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:68
+msgid "Create an environment"
+msgstr ""
+
+#: ../../source/commands.rst:68
+msgid "``conda create --name $ENVIRONMENT_NAME python``"
+msgstr ""
+
+#: ../../source/commands.rst:68
+msgid "``cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:69
+msgid "Activate an environment"
+msgstr ""
+
+#: ../../source/commands.rst:69
+msgid "``source activate $ENVIRONMENT_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:69
+msgid "``source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate``"
+msgstr ""
+
+#: ../../source/commands.rst:70
+msgid "Deactivate an environment"
+msgstr ""
+
+#: ../../source/commands.rst:70
+msgid "``source deactivate``"
+msgstr ""
+
+#: ../../source/commands.rst:70
+msgid "``deactivate``"
+msgstr ""
+
+#: ../../source/commands.rst:71
+msgid "Search available packages"
+msgstr ""
+
+#: ../../source/commands.rst:71
+msgid "``conda search $SEARCH_TERM``"
+msgstr ""
+
+#: ../../source/commands.rst:71
+msgid "``pip search $SEARCH_TERM``"
+msgstr ""
+
+#: ../../source/commands.rst:72
+msgid "Install package from specific source"
+msgstr ""
+
+#: ../../source/commands.rst:72
+msgid "``conda install --channel $URL $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:72
+msgid "``pip install --index-url $URL $PACKAGE_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:73
+msgid "List installed packages"
+msgstr ""
+
+#: ../../source/commands.rst:73
+msgid "``conda list --name $ENVIRONMENT_NAME``"
+msgstr ""
+
+#: ../../source/commands.rst:73
+msgid "``pip list``"
+msgstr ""
+
+#: ../../source/commands.rst:74
+msgid "Create requirements file"
+msgstr ""
+
+#: ../../source/commands.rst:74
+msgid "``conda list --export``"
+msgstr ""
+
+#: ../../source/commands.rst:74
+msgid "``pip freeze``"
+msgstr ""
+
+#: ../../source/commands.rst:75
+msgid "List all environments"
+msgstr ""
+
+#: ../../source/commands.rst:75
+msgid "``conda info --envs``"
+msgstr ""
+
+#: ../../source/commands.rst:75
+msgid "Install virtualenv wrapper, then ``lsvirtualenv``"
+msgstr ""
+
+#: ../../source/commands.rst:76
+msgid "Install other package manager"
+msgstr ""
+
+#: ../../source/commands.rst:76
+msgid "``conda install pip``"
+msgstr ""
+
+#: ../../source/commands.rst:76
+msgid "``pip install conda``"
+msgstr ""
+
+#: ../../source/commands.rst:77
+msgid "Install Python"
+msgstr ""
+
+#: ../../source/commands.rst:77
+msgid "``conda install python=x.x``"
+msgstr ""
+
+#: ../../source/commands.rst:78
+msgid "Update Python"
+msgstr ""
+
+#: ../../source/commands.rst:78
+msgid "``conda update python``\\*"
+msgstr ""
+
+#: ../../source/commands.rst:81
+msgid ""
+"\\* ``conda update python`` updates to the most recent in the series, so "
+"any Python 2.x would update to the latest 2.x and any Python 3.x to the "
+"latest 3.x."
+msgstr ""
+

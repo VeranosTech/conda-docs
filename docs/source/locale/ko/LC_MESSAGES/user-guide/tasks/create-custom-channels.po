@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:3
+msgid "Creating custom channels"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:5
+msgid ""
+"Channels are the path that conda takes to look for packages. The easiest "
+"way to use and manage custom channels is to use a private or public "
+"repository on `Anaconda.org <https://anaconda.org/>`_, formerly known as "
+"Binstar.org. If you designate your Anaconda.org repository as private, "
+"then only you and those you grant access can access your private "
+"repository."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:12
+msgid ""
+"If you do not wish to upload your packages to the Internet, you can build"
+" a custom repository served either through a web server or locally using "
+"a ``file://`` URL."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:16
+msgid "To create a custom channel:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:18
+msgid "If you have not yet used conda build, install conda build:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:24
+msgid ""
+"Organize all the packages in subdirectories for the platforms you wish to"
+" serve:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:41
+msgid "Run ``conda index`` on each of the platform subdirectories:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:47
+msgid ""
+"The conda index command generates a file ``repodata.json``, saved to each"
+" repository directory, which conda uses to get the metadata for the "
+"packages in the channel."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:51
+msgid ""
+"NOTE: Each time you add or modify a package in the channel, you must "
+"rerun ``conda index`` for conda to see the update."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:54
+msgid ""
+"To test custom channels, serve the custom channel using a web server or "
+"using a ``file:// url`` to the channel directory. Test by sending a "
+"search command to the custom channel."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:58
+msgid ""
+"EXAMPLE: If you want a file in the custom channel location "
+"``/opt/channel/linux-64/``, search for files in that location:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:65
+msgid ""
+"NOTE: The channel URL does not include the platform, as conda "
+"automatically detects and adds the platform."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:68
+msgid ""
+"NOTE: The option  ``--override-channels`` ensures that conda searches "
+"only your specified channel and no other channels, such as default "
+"channels or any other channels you may have listed in your ``.condarc`` "
+"file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:73
+msgid ""
+"If you have set up your private repository correctly, you get the "
+"following output:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/create-custom-channels.rst:80
+msgid ""
+"This is followed by a list of the conda packages found. This verifies "
+"that you have set up and indexed your private repository successfully."
+msgstr ""
+

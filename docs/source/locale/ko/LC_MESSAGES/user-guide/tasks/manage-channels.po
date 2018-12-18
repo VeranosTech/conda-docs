@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/manage-channels.rst:3
+msgid "Managing channels"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:5
+msgid ""
+"Different channels can have the same package, so conda must handle these "
+"channel collisions."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:8
+msgid ""
+"There will be no channel collisions if you use only the defaults channel."
+" There will also be no channel collisions if all of the channels you use "
+"only contain packages that do not exist in any of the other channels in "
+"your list. The way conda resolves these collisions matters only when you "
+"have multiple channels in your channel list that host the same package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:16
+msgid "Before conda 4.1.0"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:18
+msgid ""
+"Before conda 4.1.0 was released on June 14, 2016, when two channels "
+"hosted packages with the same name, conda installed the package with the "
+"highest version number. If there were two packages with the same version "
+"number, conda installed the one with the highest build number. Only if "
+"both the version numbers and build numbers were identical did the channel"
+" ordering make a difference. This approach had 3 problems:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:26
+msgid ""
+"Build numbers from different channels are not comparable. Channel A could"
+" do nightly builds while Channel B does weekly builds, so build 2 from "
+"Channel B could be newer than build 4 from Channel A."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:31
+msgid ""
+"Users could not specify a preferred channel. You might consider Channel B"
+" more reliable than Channel A and prefer to get packages from that "
+"channel even if the B version is older than the package in Channel A. "
+"Conda provided no way to choose that behavior. Only version and build "
+"numbers mattered."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:37
+msgid ""
+"Build numbers conflicted. This is an effect of the other 2 problems. "
+"Assume you were happily using package Alpha from Channel A and package "
+"Bravo from Channel B. The provider from Channel B then added a version of"
+" Alpha with a very high build number. Your conda updates would start "
+"installing new versions of Alpha from Channel B whether you wanted that "
+"or not. This could cause unintentional problems and a risk of deliberate "
+"attacks."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:48
+msgid "After conda 4.1.0"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:50
+msgid ""
+"By default, conda now prefers packages from a higher priority channel "
+"over any version from a lower priority channel. Therefore, you can now "
+"safely put channels at the bottom of your channel list to provide "
+"additional packages that are not in the default channels, and still be "
+"confident that these channels will not override the core package set."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:57
+msgid ""
+"Conda collects all of the packages with the same name across all listed "
+"channels and processes them as follows:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:60
+msgid "Sorts packages from highest to lowest channel priority."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:62
+msgid ""
+"Sorts tied packages---same channel priority---from highest to lowest "
+"version number."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:65
+msgid ""
+"Sorts still-tied packages---same channel priority and same version---from"
+" highest to lowest build number."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:68
+msgid ""
+"Installs the first package on the sorted list that satisfies the "
+"installation specifications."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:71
+msgid ""
+"To make conda use the old method and install the newest version of a "
+"package in any listed channel:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:74
+msgid "Add ``channel_priority: false`` to your ``.condarc`` file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:76
+msgid "OR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:78
+msgid "Run the equivalent command::"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:82
+msgid "Conda then sorts as follows:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:84
+msgid "Sorts the package list from highest to lowest version number."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:86
+msgid "Sorts tied packages from highest to lowest channel priority."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:88
+msgid "Sorts tied packages from highest to lowest build number."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:90
+msgid ""
+"Because build numbers from different channels are not comparable, build "
+"number still comes after channel priority."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:93
+msgid ""
+"The following command adds the channel \"new_channel\" to the top of the "
+"channel list, making it the highest priority::"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:98
+msgid "Conda now has an equivalent command::"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-channels.rst:102
+msgid ""
+"Conda also now has a command that adds the new channel to the bottom of "
+"the channel list, making it the lowest priority::"
+msgstr ""
+

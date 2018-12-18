@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:3
+msgid "Adding pre-link, post-link and pre-unlink scripts"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:7
+msgid ""
+"You can add scripts to a recipe. These scripts are executed in a "
+"subprocess by conda, using ``/bin/bash <script>`` on Linux and macOS, and"
+" ``%COMSPEC% /c <script>`` on Windows."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:11
+msgid "The convention for the path and filenames of these scripts on Windows is::"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:15
+msgid "On Linux and macOS, the convention is::"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:19
+msgid "``<name>`` is the package name and ``<action>`` is one of the following:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:21
+msgid ""
+"``pre-link``---Executed before the package is installed. An error is "
+"indicated by a nonzero exit and causes conda to stop and causes the "
+"installation to fail."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:24
+msgid ""
+"``post-link``---Executed after the package is installed. An error is "
+"indicated by a nonzero exist and causes installation to fail. If there is"
+" an error conda does not write any package metadata."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:27
+msgid ""
+"``pre-unlink``---Executed before the package is removed. An error is "
+"indicated by a nonzero exist and causes the removal to fail."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:30
+msgid ""
+"EXAMPLE: When there is a script named ``/bin/.foo-post-link.sh`` in the "
+"package ``foo-1.0-0.tar.bz2``, it is executed after the package is "
+"installed."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:33
+msgid "The scripts set the following environment variables:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:38
+msgid "PREFIX"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:39
+msgid "The install prefix."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:40
+msgid "PKG_NAME"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:41
+msgid "The name of the package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:42
+msgid "PKG_VERSION"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:43
+msgid "The version of the package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:44
+msgid "PKG_BUILDNUM"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:45
+msgid "The build number of the package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:47
+msgid "The scripts are:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:49
+msgid "Windows:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:51
+msgid "``pre-link.bat``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:52
+msgid "``post-link.bat``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:53
+msgid "``pre-unlink.bat``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:55
+msgid "macOS and Linux:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:57
+msgid "``pre-link.sh``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:58
+msgid "``post-link.sh``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:59
+msgid "``pre-unlink.sh``"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:61
+msgid "Post-link and pre-unlink scripts should:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:63
+msgid "Be avoided whenever possible."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:64
+msgid "Not touch anything other than the files being installed."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:65
+msgid "Not write anything to stdout or stderr, unless an error occurs."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:66
+msgid "Not depend on any installed or to be installed conda packages."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:67
+msgid ""
+"Depend only on simple system tools such as ``rm``, ``cp``, ``mv`` and "
+"``ln``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/link-scripts.rst:69
+msgid ""
+"The scripts should not write to stdout or stderr unless an error occurs, "
+"but they may write to ``$PREFIX/.messages.txt``, which is shown after "
+"conda completes all actions."
+msgstr ""
+

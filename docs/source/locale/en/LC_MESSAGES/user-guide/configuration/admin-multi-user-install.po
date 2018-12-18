@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:3
+msgid "Administering a multi-user conda installation"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:5
+msgid ""
+"By default, conda and all packages it installs, including Anaconda, are "
+"installed locally with a user-specific configuration. Administrative "
+"privileges are not required, and no upstream files or other users are "
+"affected by the installation."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:11
+msgid ""
+"You can make conda and any number of packages available to a group of 1 "
+"or more users, while preventing these users from installing unwanted "
+"packages with conda:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:15
+msgid ""
+"Install conda and the allowed packages, if any, in a location that is "
+"under administrator control and accessible to users."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:19
+msgid ""
+"Create a :doc:`.condarc system configuration file <use-condarc>` in the "
+"root directory of the installation. This system-level configuration file "
+"will override any user-level configuration files installed by the user."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:25
+msgid ""
+"Each user accesses the central conda installation, which reads settings "
+"from the user ``.condarc`` configuration file located in their home "
+"directory. The path to the user file is the same as the root environment "
+"prefix displayed by ``conda info``, as shown in :ref:`admin-inst-user` "
+"below. The user ``.condarc`` file is limited by the system ``.condarc`` "
+"file."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:32
+msgid ""
+"System configuration settings are commonly used in a system ``.condarc`` "
+"file but may also be used in a user ``.condarc`` file. All user "
+"configuration settings may also be used in a system ``.condarc`` file."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:37
+msgid ""
+"For information about settings in the ``.condarc`` file, see :doc:`use-"
+"condarc`."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:44
+msgid "Example administrator-controlled installation"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:46
+msgid ""
+"The following example describes how to view the system configuration "
+"file, review the settings, compare it to a user's configuration file and "
+"determine what happens when the user attempts to access a file from a "
+"blocked channel. It then describes how the user must modify their "
+"configuration file to access the channels allowed by the administrator."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:55
+msgid "System configuration file"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:57
+msgid ""
+"The system configuration file must be in the top-level conda installation"
+" directory. Check the path where conda is located:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:65
+msgid ""
+"View the contents of the ``.condarc`` file in the administrator's "
+"directory:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:72
+msgid ""
+"The following administrative ``.condarc`` file sets "
+"``allow_other_channels`` to ``False``, and it specifies that users may "
+"download packages only from the ``admin`` channel:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:85
+msgid ""
+"NOTE: The admin channel can also be expressed as "
+"https://conda.anaconda.org/admin/"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:88
+msgid ""
+"Because ``allow_other_channels`` is ``False`` and the channel defaults "
+"are not explicitly specified, users are disallowed from downloading "
+"packages from the default channels. You can check this in the next "
+"procedure."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:96
+msgid "User configuration file"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:98
+msgid "Check the location of the user's conda installation:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:109
+msgid ""
+"The ``conda info`` command shows that conda is using the user's "
+"``.condarc file``, located at ``/Users/gergely/.condarc`` and that the "
+"default channels such as ``repo.continuum.io`` are listed as channel "
+"URLs."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:114
+msgid ""
+"View the contents of the administrative ``.condarc`` file in the "
+"directory that was located in step 1:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:123
+msgid ""
+"This user's ``.condarc`` file specifies only the default channels, but "
+"the administrator config file has blocked default channels by specifying "
+"that only ``admin`` is allowed. If this user attempts to search for a "
+"package in the default channels, they get a message telling them what "
+"channels are allowed:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:139
+msgid ""
+"This error message tells the user to add the ``admin`` channel to their "
+"configuration file."
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:142
+msgid ""
+"The user must edit their local ``.condarc`` configuration file to access "
+"the package through the admin channel:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/admin-multi-user-install.rst:150
+msgid "The user can now search for packages in the allowed ``admin`` channel."
+msgstr ""
+

@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/manage-python.rst:3
+msgid "Managing Python"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:10
+msgid ""
+"Conda treats Python the same as any other package, so it is easy to "
+"manage and update multiple installations."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:13
+msgid ""
+"Anaconda supports Python 2.7, 3.4, 3.5 and 3.6. The default is Python 2.7"
+" or 3.6, depending on which installer you used:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:16
+msgid "For the installers \"Anaconda\" and \"Miniconda,\" the default is 2.7."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:19
+msgid "For the installers \"Anaconda3\" or \"Miniconda3,\" the default is 3.6."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:24
+msgid "Viewing a list of available Python versions"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:26
+msgid ""
+"To list the versions of Python that are available to install, in your "
+"Terminal window or an Anaconda Prompt, run:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:33
+msgid "This lists all packages whose names contain the text ``python``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:35
+msgid ""
+"To list only the packages whose full name is exactly ``python``, add the "
+"``--full-name`` option. In your Terminal window or an Anaconda Prompt, "
+"run:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:45
+msgid "Installing a different version of Python"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:47
+msgid ""
+"To install a different version of Python without overwriting the current "
+"version, create a new environment and install the second Python version "
+"into it:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:51
+msgid "Create the new environment:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:53
+msgid ""
+"To create the new environment for Python 3.6, in your Terminal window or "
+"an Anaconda Prompt, run:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:60
+msgid ""
+"NOTE: Replace ``py36`` with the name of the environment you want to "
+"create. ``anaconda`` is the metapackage that includes all of the Python "
+"packages comprising the Anaconda distribution. ``python=3.6`` is the "
+"package and version you want to install in this new environment. This "
+"could be any package, such as ``numpy=1.7``, or :ref:`multiple packages "
+"<installing multiple packages>`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:68
+msgid ""
+"To create the new environment for Python 2.7, in your Terminal window or "
+"an Anaconda Prompt, run:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:75
+msgid ":ref:`Activate the new environment <activate-env>`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:77
+msgid ""
+"Verify that the new environment is your :ref:`current environment "
+"<determine-current-env>`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:80
+msgid ""
+"To verify that the current environment uses the new Python version, in "
+"your Terminal window or an Anaconda Prompt, run:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:89
+msgid "Using a different version of Python"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:91
+msgid ""
+"To switch to an environment that has different version of Python, "
+":ref:`activate the environment <activate-env>`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:96
+msgid "Updating or upgrading Python"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:98
+msgid "Use the Terminal or an Anaconda Prompt for the following steps."
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:100
+msgid ""
+"If you are in an environment with Python version 3.4.2, the following "
+"command updates Python to the latest version in the 3.4 branch:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/manage-python.rst:108
+msgid ""
+"The following command upgrades Python to another branch---3.6---by "
+"installing that version of Python:"
+msgstr ""
+

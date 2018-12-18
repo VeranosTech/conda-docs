@@ -1,0 +1,710 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:5
+msgid "Environment variables"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:14
+msgid "Dynamic behavior based on state of build process"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:16
+msgid ""
+"There are times when you may want to process a single file in different "
+"ways at more than one step in the render-build-test flow of conda build. "
+"Conda build sets the CONDA_BUILD_STATE environment variable during each "
+"of these phases. The possible values are:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:22
+msgid "RENDER---Set during evaluation of the ``meta.yaml`` file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:24
+msgid ""
+"BUILD---Set during processing of the ``bld.bat`` or ``build.sh`` script "
+"files."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:27
+msgid ""
+"TEST---Set during the running of any ``run_test`` scripts, which also "
+"includes any commands defined in ``meta.yaml`` in the ``test/commands`` "
+"section."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:31
+msgid "The CONDA_BUILD_STATE variable is undefined outside of these locations."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:36
+msgid "Environment variables set during the build process"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:38
+msgid ""
+"During the build process, the following environment variables are set, on"
+" Windows with ``bld.bat`` and on macOS and Linux with ``build.sh``. By "
+"default, these are the only variables available to your build script. "
+"Unless otherwise noted, no variables are inherited from the shell "
+"environment in which you invoke ``conda-build``. To override this "
+"behavior, see :ref:`inherited-env-vars`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:50
+msgid "ARCH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:51
+msgid ""
+"Either ``32`` or ``64``, to specify whether the build is 32-bit or "
+"64-bit.  The value depends on the ARCH environment variable and  defaults"
+" to the architecture the interpreter running conda was compiled with."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:56
+msgid "CMAKE_GENERATOR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:57
+msgid ""
+"The CMake generator string for the current build environment. On Linux "
+"systems, this is always ``Unix Makefiles``. On Windows, it is generated "
+"according to the Visual Studio version activated at build time, for "
+"example, ``Visual Studio 9 2008 Win64``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:62
+msgid "CONDA_BUILD=1"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:63
+msgid "Always set."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:64
+msgid "CPU_COUNT"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:65
+msgid ""
+"The number of CPUs on the system, as reported by "
+"``multiprocessing.cpu_count()``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:67
+msgid "SHLIB_EXT"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:68
+msgid "The shared library extension."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:69
+msgid "DIRTY"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:70
+msgid ""
+"Set to 1 if the ``--dirty`` flag is passed to the ``conda-build`` "
+"command. May be used to  skip parts of a build script conditionally for "
+"faster iteration time when developing recipes. For example, downloads, "
+"extraction and other things that need not be repeated."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:75
+msgid "HTTP_PROXY"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:76
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:78
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:80
+msgid "Inherited from your shell environment."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:77
+msgid "HTTPS_PROXY"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:79
+msgid "LANG"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:81
+msgid "MAKEFLAGS"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:82
+msgid ""
+"Inherited from your shell environment. May be used to set additional "
+"arguments to make, such as ``-j2``, which uses 2 CPU cores to build your "
+"recipe."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:85
+msgid "PY_VER"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:86
+msgid ""
+"Python version building against. Set with the ``--python`` argument or "
+"with the CONDA_PY environment variable."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:88
+msgid "NPY_VER"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:89
+msgid ""
+"NumPy version to build against. Set with the ``--numpy`` argument or with"
+" the CONDA_NPY environment variable."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:91
+msgid "PATH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:92
+msgid "Inherited from your shell environment and augmented with ``$PREFIX/bin``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:94
+msgid "PREFIX"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:95
+msgid "Build prefix to which the build script should install."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:96
+msgid "PKG_BUILDNUM"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:97
+msgid "Build number of the package being built."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:98
+msgid "PKG_NAME"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:99
+msgid "Name of the package being built."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:100
+msgid "PKG_VERSION"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:101
+msgid "Version of the package being built."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:102
+msgid "PKG_BUILD_STRING"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:103
+msgid ""
+"Complete build string of the package being built, including hash. "
+"EXAMPLE: py27h21422ab_0 . Conda-build 3.0+."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:105
+msgid "PKG_HASH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:106
+msgid ""
+"Hash of the package being built, without leading h. EXAMPLE: 21422ab . "
+"Conda-build 3.0+."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:108
+msgid "PYTHON"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:109
+msgid ""
+"Path to the Python executable in the host prefix. Python is installed "
+"only in the host prefix when it is listed as a host requirement."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:112
+msgid "PY3K"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:113
+msgid "``1`` when Python 3 is installed in the build prefix, otherwise ``0``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:115
+msgid "R"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:116
+msgid ""
+"Path to the R executable in the build prefix. R is only installed in the "
+"build prefix when it is listed as a build requirement."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:119
+msgid "RECIPE_DIR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:120
+msgid "Directory of the recipe."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:121
+msgid "SP_DIR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:122
+msgid "Python's site-packages location."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:123
+msgid "SRC_DIR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:124
+msgid ""
+"Path to where source is unpacked or cloned. If the source file is not a "
+"recognized file type---zip, tar, tar.bz2, or tar.xz---this is a directory"
+" containing a copy of the source file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:128
+msgid "STDLIB_DIR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:129
+msgid "Python standard library location."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:131
+msgid ""
+"Unix-style packages on Windows, which are usually statically linked to "
+"executables, are built in a special ``Library`` directory under the build"
+" prefix. The environment variables listed in the following table are "
+"defined only on Windows."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:139
+msgid "CYGWIN_PREFIX"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:140
+msgid ""
+"Same as PREFIX, but as a Unix-style path, such as "
+"``/cygdrive/c/path/to/prefix``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:142
+msgid "LIBRARY_BIN"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:143
+msgid "``<build prefix>\\Library\\bin``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:144
+msgid "LIBRARY_INC"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:145
+msgid "``<build prefix>\\Library\\include``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:146
+msgid "LIBRARY_LIB"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:147
+msgid "``<build prefix>\\Library\\lib``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:148
+msgid "LIBRARY_PREFIX"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:149
+msgid "``<build prefix>\\Library``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:150
+msgid "SCRIPTS"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:151
+msgid "``<build prefix>\\Scripts``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:152
+msgid "VS_MAJOR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:153
+msgid ""
+"The major version number of the Visual Studio version activated within "
+"the build, such as ``9``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:155
+msgid "VS_VERSION"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:156
+msgid ""
+"The version number of the Visual Studio version activated within the "
+"build, such as ``9.0``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:158
+msgid "VS_YEAR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:159
+msgid ""
+"The release year of the Visual Studio version activated within the build,"
+" such as ``2008``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:162
+msgid ""
+"The environment variables listed in the following table are defined only "
+"on macOS and Linux."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:168
+msgid "HOME"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:169
+msgid "Standard $HOME environment variable."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:170
+msgid "PKG_CONFIG_PATH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:171
+msgid "Path to ``pkgconfig`` directory."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:173
+msgid ""
+"The environment variables listed in the following table are defined only "
+"on macOS."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:179
+msgid "CFLAGS"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:180
+msgid "``-arch`` flag."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:181
+msgid "CXXFLAGS"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:182
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:184
+msgid "Same as CFLAGS."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:183
+msgid "LDFLAGS"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:185
+msgid "MACOSX_DEPLOYMENT_TARGET"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:186
+msgid "Same as the Anaconda Python macOS deployment target. Currently ``10.6``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:187
+msgid "OSX_ARCH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:188
+msgid "``i386`` or ``x86_64``, depending on Python build."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:190
+msgid ""
+"The environment variable listed in the following table is defined only on"
+" Linux."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:196
+msgid "LD_RUN_PATH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:197
+msgid "``<build prefix>/lib``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:203
+msgid "Git environment variables"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:205
+msgid ""
+"The environment variables listed in the following table are defined when "
+"the source is a git repository, specifying the source either with git_url"
+" or path."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:212
+msgid "GIT_BUILD_STR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:213
+msgid ""
+"String that joins GIT_DESCRIBE_NUMBER and GIT_DESCRIBE_HASH by an "
+"underscore."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:215
+msgid "GIT_DESCRIBE_HASH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:216
+msgid "The current commit short-hash as displayed from ``git describe --tags``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:218
+msgid "GIT_DESCRIBE_NUMBER"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:219
+msgid "String denoting the number of commits since the most recent tag."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:221
+msgid "GIT_DESCRIBE_TAG"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:222
+msgid ""
+"String denoting the most recent tag from the current commit, based on the"
+" output of ``git describe --tags``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:224
+msgid "GIT_FULL_HASH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:225
+msgid "String with the full SHA1 of the current HEAD."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:227
+msgid ""
+"These can be used in conjunction with templated ``meta.yaml`` files to "
+"set things---such as the build string---based on the state of the git "
+"repository."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:234
+msgid "Mercurial environment variables"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:236
+msgid ""
+"The environment variables listed in the following table are defined when "
+"the source is a mercurial repository."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:242
+msgid "HG_BRANCH"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:243
+msgid "String denoting the presently active branch."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:244
+msgid "HG_BUILD_STR"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:245
+msgid "String that joins HG_NUM_ID and HG_SHORT_ID by an underscore."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:247
+msgid "HG_LATEST_TAG"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:248
+msgid "String denoting the most recent tag from the current commit."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:250
+msgid "HG_LATEST_TAG_DISTANCE"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:251
+msgid "String denoting number of commits since the most recent tag."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:253
+msgid "HG_NUM_ID"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:254
+msgid "String denoting the revision number."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:255
+msgid "HG_SHORT_ID"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:256
+msgid "String denoting the hash of the commit."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:262
+msgid "Inherited environment variables"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:264
+msgid ""
+"Other than those mentioned above, no variables are inherited from the "
+"environment in which you invoke conda build. You can choose to inherit "
+"additional environment variables by adding them to ``meta.yaml``:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:277
+msgid ""
+"If an inherited variable is missing from your shell environment, it "
+"remains unassigned, but a warning is issued noting that it has no value "
+"assigned."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:281
+msgid ""
+"NOTE: Inheriting environment variables can make it difficult for others "
+"to reproduce binaries from source with your recipe. Use this feature with"
+" caution or avoid it."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:285
+msgid ""
+"NOTE: If you split your build and test phases with ``--no-test`` and "
+"``--test``, you need to ensure that the environment variables present at "
+"build time and test time match. If you do not, the package hashes may use"
+" different values, and your package may not be testable, because the "
+"hashes will differ."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:294
+msgid "Environment variables that affect the build process"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:299
+msgid "CONDA_PY"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:300
+msgid ""
+"The Python version used to build the package. Should be ``27``, ``34``, "
+"``35`` or ``36``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:302
+msgid "CONDA_NPY"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:303
+msgid ""
+"The NumPy version used to build the package, such as ``19``, ``110`` or "
+"``111``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:305
+msgid "CONDA_PREFIX"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:306
+msgid ""
+"The path to the conda environment used to build the package, such as "
+"``/path/to/conda/env``. Useful to pass as the environment prefix "
+"parameter to various conda tools, usually labeled ``-p`` or ``--prefix``."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:315
+msgid "Environment variables to set build features"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:317
+msgid ""
+"The environment variables listed in the following table are inherited "
+"from the process running conda build. These variables control "
+":doc:`features`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:324
+msgid "FEATURE_NOMKL"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:325
+msgid "Adds the ``nomkl`` feature to the built package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:326
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:329
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:332
+msgid "Accepts ``0`` for off and ``1`` for on."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:327
+msgid "FEATURE_DEBUG"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:328
+msgid "Adds the ``debug`` feature to the built package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:330
+msgid "FEATURE_OPT"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:331
+msgid "Adds the ``opt`` feature to the built package."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:338
+msgid "Environment variables that affect the test process"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/environment-variables.rst:340
+msgid ""
+"All of the above environment variables are also set during the test "
+"process, using the test prefix instead of the build prefix."
+msgstr ""
+

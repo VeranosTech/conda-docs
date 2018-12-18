@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:3
+msgid "Using conda on Windows XP with or without a proxy"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:5
+msgid ""
+"Although Windows XP mainstream support and Extended Support from "
+"Microsoft have ended, and Windows XP is no longer one of the target "
+"systems supported by Anaconda, some users have had success using Anaconda"
+" on Windows XP with the methods described on this page."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:11
+msgid ""
+"Anaconda 2.3.0 is the last version of Python 3-based Anaconda to support "
+"Windows XP. Anaconda 2.4 and later have a version of Python 3 built with "
+"Visual Studio 2015, which by default does not support Windows XP."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:16
+msgid ""
+"You can install Anaconda 2.3.0 and then update it with ``conda update "
+"conda`` and ``conda update --all``. Download "
+"``Anaconda3-2.3.0-Windows-x86.exe`` at "
+"https://repo.continuum.io/archive/. Install it in any location, such as "
+"``C:\\Anaconda``."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:23
+msgid "Using a proxy with Windows XP"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:25
+msgid ""
+"To configure conda for use behind a corporate proxy that uses proxy auto-"
+"config (PAC) files and SSL certificates for secure connections:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:29
+msgid "Find a proxy server address from the PAC file:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:31
+msgid "Open Internet Explorer."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:33
+msgid ""
+"From the **Tools** menu, select Internet Options, and then click the "
+"**Connections** tab."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:36
+msgid "On the **Connections** tab, click the LAN Settings button."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:38
+msgid ""
+"In the LAN Settings dialog box, copy the address under the Use automatic "
+"configuration script checkbox."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:41
+msgid "Click the Cancel button to close the LAN settings."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:43
+msgid "Click the Cancel button to close the Internet Options."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:45
+msgid ""
+"Paste the address into the Internet Explorer address bar, then press the "
+"Enter key."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:48
+msgid ""
+"In the PAC file that opens, search for ``return`` until you find what "
+"looks like a proxy IP or DNS address with the port number, which may take"
+" some time in a long file."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:52
+msgid "Copy the address and port number."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:54
+msgid ""
+"Follow the :ref:`.condarc instructions <config-overview>` to create a "
+"file named ``.condarc`` in your home directory or the installation "
+"directory, such as ``C:\\Anaconda\\.condarc``."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:58
+msgid ""
+"Follow the :ref:`.condarc proxy server instructions <config-proxy>` to "
+"add proxy information to the ``.condarc`` file."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:62
+msgid ""
+"If you decide to include any passwords, be aware of transformations that "
+"can affect special characters."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:65
+msgid "EXAMPLE: This example shows proxy information with passwords::"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:73
+msgid ""
+"If you include proxy information without passwords, you will be asked to "
+"answer authentication prompts at the command line."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:76
+msgid "EXAMPLE: This example shows proxy information without passwords::"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:84
+msgid ""
+"Once the proxy is configured, you can run ``conda update conda`` and then"
+" create and manage environments with the Anaconda Launcher GUI."
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:88
+msgid ""
+"Some packages such as ``flask-login`` may not be available through conda,"
+" so you may need to use pip to install them:"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:91
+msgid "To use pip securely over https::"
+msgstr ""
+
+#: ../../source/user-guide/configuration/use-winxp-with-proxy.rst:95
+msgid ""
+"If the secure https proxy fails, you can force pip to use an insecure "
+"http proxy instead::"
+msgstr ""
+

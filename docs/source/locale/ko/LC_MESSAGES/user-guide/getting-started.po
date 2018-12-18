@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/getting-started.rst:3
+msgid "Getting started with conda"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:7
+msgid ""
+"Conda is a powerful package manager and environment manager that you use "
+"with command line commands at the Anaconda Prompt for Windows, or in a "
+"Terminal window for macOS or Linux."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:11
+msgid ""
+"This 20-minute guide to getting started with conda lets you try out the "
+"major features of conda. You should understand how conda works when you "
+"finish this guide."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:15
+msgid ""
+"SEE ALSO: `Getting started with Anaconda Navigator "
+"<https://docs.anaconda.com/anaconda/navigator/getting-started>`_, a "
+"graphical user interface that lets you use conda in a web-like interface "
+"without having to enter manual commands. Compare the Getting started "
+"guides for each to see which program you prefer."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:22
+msgid "Before you start"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:24
+msgid ""
+"You should have already `installed Anaconda "
+"<https://docs.anaconda.com/anaconda/install/>`_."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:28
+msgid "Contents"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:30
+msgid ""
+":ref:`Starting conda <starting-conda>` on Windows, macOS or Linux. 2 "
+"MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:32
+msgid ""
+":ref:`Managing conda <managing-conda>`. Verify that Anaconda is installed"
+" and check that conda is updated to the current version. 3 MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:34
+msgid ""
+":ref:`Managing environments <managing-envs>`. Create :ref:`environments "
+"<concept-conda-env>` and move easily between them.  5 MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:36
+msgid ""
+":ref:`Managing Python <managing-python>`. Create an environment that has "
+"a different version of Python. 5 MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:38
+msgid ""
+":ref:`Managing packages <managing-pkgs>`. Find packages available for you"
+" to install. Install packages. 5 MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:40
+msgid "TOTAL TIME: 20 MINUTES"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:46
+msgid "Starting conda"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:48
+msgid "**Windows**"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:50
+msgid "From the Start menu, search for and open \"Anaconda Prompt\"."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:59
+msgid "On Windows, all commands below are typed into the Anaconda Prompt window."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:61
+msgid "**MacOS**"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:63
+msgid "Open Launchpad, then click the Terminal icon."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:65
+msgid "On macOS, all commands below are typed into the Terminal window."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:67
+msgid "**Linux**"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:69
+msgid "Open a Terminal window."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:71
+msgid "On Linux, all commands below are typed into the Terminal window."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:76
+msgid "Managing conda"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:78
+msgid "Verify that conda is installed and running on your system by typing:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:84
+msgid ""
+"Conda displays the number of the version that you have installed. You do "
+"not need to navigate to the Anaconda directory."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:87
+msgid "EXAMPLE: ``conda 4.4.9``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:89
+msgid ""
+"NOTE: If you get an error message, make sure you closed and re-opened the"
+" Terminal window after installing, or do it now. Then verify that you are"
+" logged into the same user account that you used to install Anaconda or "
+"Miniconda."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:93
+msgid "Update conda to the current version. Type the following:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:99
+msgid "Conda compares versions and then displays what is available to install."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:101
+msgid "If a newer version of conda is available, type ``y`` to update:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:107
+msgid ""
+"TIP: We recommend that you always keep conda updated to the latest "
+"version."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:112
+msgid "Managing Environments"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:114
+msgid ""
+"Conda allows you to to create separate environments containing files, "
+"packages and their dependencies that will not interact with other "
+"environments."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:117
+msgid ""
+"When you begin using conda, you already have a default environment named "
+"``base``. You don't want to put programs into your base environment, "
+"though. Create separate environments to keep your programs isolated from "
+"each other."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:121
+msgid "Create a new environment and install a package in it."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:123
+msgid ""
+"We will name the environment ``snowflakes`` and install the package "
+"BioPython. At the Anaconda Prompt or in your Terminal window, type the "
+"following:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:131
+msgid ""
+"Conda checks to see what additional packages (\"dependencies\") Biopython"
+" will need, and asks if you want to proceed:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:138
+msgid "Type \"y\" and press Enter to proceed."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:140
+msgid "To use, or \"activate\" the new environment, type the following:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:142
+msgid "Windows:  ``activate snowflakes``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:143
+msgid "Linux and macOS: ``source activate snowflakes``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:145
+msgid ""
+"Now that you are in your ``snowflakes`` environment, any conda commands "
+"you type will go to that environment until you deactivate it."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:149
+msgid "To see a list of all your environments, type:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:155
+msgid "A list of environments appears, similar to the following:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:164
+msgid "TIP: The active environment is the one with an asterisk (*)."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:166
+msgid "Change your current environment back to the default (base):"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:168
+msgid "Windows:  ``deactivate``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:169
+#: ../../source/user-guide/getting-started.rst:233
+msgid "Linux, macOS: ``source deactivate``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:171
+msgid ""
+"TIP: When the environment is deactivated, its name is no longer shown in "
+"your prompt, and the asterisk (*) returns to base. To verify, you can "
+"repeat the  ``conda info --envs`` command."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:179
+msgid "Managing Python"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:181
+msgid ""
+"When you create a new environment, conda installs the same Python version"
+" you used when you downloaded and installed Anaconda. If you want to use "
+"a different version of Python, for example Python 3.5, simply create a "
+"new environment and specify the version of Python that you want."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:186
+msgid "Create a new environment named \"snakes\" that contains Python 3.5:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:192
+msgid "When conda asks if you want to proceed, type \"y\" and press Enter."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:194
+msgid "Activate the new environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:196
+msgid "Windows:  ``activate snakes``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:197
+msgid "Linux, macOS: ``source activate snakes``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:199
+msgid "Verify that the snakes environment has been added and is active:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:205
+msgid ""
+"Conda displays the list of all environments with an asterisk (*) after "
+"the name of the active environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:216
+msgid ""
+"The active environment is also displayed in front of your prompt in "
+"(parentheses) or [brackets] like this:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:223
+msgid "Verify which version of Python is in your current environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:230
+msgid "Deactivate the snakes environment and return to base environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:232
+msgid "Windows: ``deactivate``"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:239
+msgid "Managing packages"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:241
+msgid ""
+"In this section, you check which packages you have installed, check which"
+" are available and look for a specific package and install it."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:245
+msgid ""
+"To find a package you have already installed, first activate the "
+"environment you want to search. Look above for the commands to "
+":ref:`activate your snakes environment <managing-envs>`."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:249
+msgid ""
+"Check to see if a package you have not installed named \"beautifulsoup4\""
+" is available from the Anaconda repository (must be connected to the "
+"Internet):"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:257
+msgid ""
+"Conda displays a list of all packages with that name on the Anaconda "
+"repository, so we know it is available."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:260
+msgid "Install this package into the current environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:266
+msgid "Check to see if the newly installed program is in this environment:"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:274
+msgid "More information"
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:276
+msgid ":doc:`Conda cheat sheet <cheatsheet>`."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:277
+msgid "Full documentation--- https://conda.io/docs/ ."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:278
+msgid ""
+"Free community support--- "
+"https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda ."
+msgstr ""
+
+#: ../../source/user-guide/getting-started.rst:279
+msgid "Paid support options--- https://www.anaconda.com/support/ ."
+msgstr ""
+

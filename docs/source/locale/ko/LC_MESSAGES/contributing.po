@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/contributing.rst:2
+msgid "Contributing"
+msgstr ""
+
+#: ../../source/contributing.rst:7
+msgid "New Issues"
+msgstr ""
+
+#: ../../source/contributing.rst:9
+msgid "If your issue is a bug report or feature request for:"
+msgstr ""
+
+#: ../../source/contributing.rst:11
+msgid ""
+"**a specific conda package**: please file it at "
+"https://github.com/ContinuumIO/anaconda-issues/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:12
+msgid ""
+"**anaconda.org**: please file it at https://github.com/Anaconda-"
+"Platform/support/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:13
+msgid ""
+"**repo.anaconda.com**: please file it at https://github.com/ContinuumIO"
+"/anaconda-issues/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:14
+msgid ""
+"**commands under** ``conda build``: please file it at "
+"https://github.com/conda/conda-build/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:15
+msgid ""
+"**commands under** ``conda env``: please file it at "
+"https://github.com/conda/conda/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:16
+msgid ""
+"**all other conda commands**: please file it at "
+"https://github.com/conda/conda/issues"
+msgstr ""
+
+#: ../../source/contributing.rst:20
+msgid "Development Environment, Bash"
+msgstr ""
+
+#: ../../source/contributing.rst:22
+msgid ""
+"To set up an environment to start developing on conda code, we recommend "
+"the following steps:"
+msgstr ""
+
+#: ../../source/contributing.rst:24
+msgid ""
+"Fork the conda/conda repository, clone it locally anywhere you choose (an"
+" isolation miniconda will be set up within the clone directory), and set "
+"up ``git remote`` to point to upstream and fork. For detailed directions,"
+" see below."
+msgstr ""
+
+#: ../../source/contributing.rst:28
+msgid ""
+"1a. Choose where you want the repository located (not location of "
+"existing conda)"
+msgstr ""
+
+#: ../../source/contributing.rst:34
+msgid ""
+"1b. Clone the project, with ``upstream`` being the main repository. Make "
+"sure to click the ``Fork`` button above so you have your own copy of this"
+" repo."
+msgstr ""
+
+#: ../../source/contributing.rst:44 ../../source/contributing.rst:101
+msgid "Create a local development environment, and activate that environment"
+msgstr ""
+
+#: ../../source/contributing.rst:50
+msgid ""
+"This command will create a project-specific base environment at "
+"``./devenv``. If the environment already exists, this command will just "
+"quickly activate the already-created ``./devenv`` environment."
+msgstr ""
+
+#: ../../source/contributing.rst:54 ../../source/contributing.rst:98
+msgid ""
+"To be sure that the conda code being interpreted is the code in the "
+"project directory, look at the value of ``conda location:`` in the output"
+" of ``conda info --all``."
+msgstr ""
+
+#: ../../source/contributing.rst:57
+msgid "Run conda's unit tests using GNU make"
+msgstr ""
+
+#: ../../source/contributing.rst:63
+msgid "or alternately with pytest"
+msgstr ""
+
+#: ../../source/contributing.rst:69
+msgid "or you can use pytest to focus on one specific test"
+msgstr ""
+
+#: ../../source/contributing.rst:78
+msgid "Development Environment, Windows cmd.exe shell"
+msgstr ""
+
+#: ../../source/contributing.rst:80
+msgid "In these steps, we assume ``git`` is installed and available on ``PATH``."
+msgstr ""
+
+#: ../../source/contributing.rst:82
+msgid "Choose where you want the project located"
+msgstr ""
+
+#: ../../source/contributing.rst:88
+msgid ""
+"Clone the project, with ``origin`` being the main repository. Make sure "
+"to click the ``Fork`` button above so you have your own copy of this "
+"repo."
+msgstr ""
+
+#: ../../source/contributing.rst:107
+msgid ""
+"This command will create a project-specific base environment at "
+"``.\\devenv``. If the environment already exists, this command will just "
+"quickly activate the already-created ``.\\devenv`` environment."
+msgstr ""
+
+#: ../../source/contributing.rst:113
+msgid "Conda Contributor License Agreement"
+msgstr ""
+
+#: ../../source/contributing.rst:115
+msgid ""
+"In case you're new to CLAs, this is rather standard procedure for larger "
+"projects. `Django <https://www.djangoproject.com/foundation/cla/>`_ and "
+"even `Python <https://www.python.org/psf/contrib/contrib-form/>`_ itself "
+"both use something similar."
+msgstr ""
+

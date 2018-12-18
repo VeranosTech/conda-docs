@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:3
+msgid "Using conda with Travis CI"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:10
+msgid ""
+"If you are already using Travis CI, using conda is a preferable "
+"alternative to using apt-get and pip to install packages. The Debian "
+"repos provided by Travis may not include packages for all versions of "
+"Python or may not be updated as quickly. Installing such packages with "
+"pip may also be undesirable, as this can take a long time, which can "
+"consume a large portion of the 50 minutes that Travis allows for each "
+"build. Using conda also lets you test the building of conda recipes on "
+"Travis."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:19
+msgid ""
+"This page describes how to use conda to test a Python package on Travis "
+"CI. However, you can use conda with any language, not just Python."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:25
+msgid "The .travis.yml file"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:27
+msgid ""
+"The following code sample shows how to modify the ``.travis.yml`` file to"
+" use `Miniconda <https://conda.io/miniconda.html>`_ for a project that "
+"supports Python 2.7, 3.5 and 3.6:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:64
+msgid ""
+"NOTE: For information about the basic configuration for Travis CI, see "
+"`Building a Python Project <http://docs.travis-"
+"ci.com/user/languages/python/#Examples>`_."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:70
+msgid "Supporting packages that do not have official builds"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:72
+msgid "To support a package that does not have official Anaconda builds:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:74
+msgid "Build the package yourself."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:76
+msgid "Add it to an `Anaconda.org <http://Anaconda.org>`_ channel."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:78
+msgid ""
+"Add the following line to the install steps in ``.travis.yml`` so that it"
+" finds the packages on that channel:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:86
+msgid "NOTE: Replace ``your_Anaconda_dot_org_username`` with your user name."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:91
+msgid "Building a conda recipe"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:93
+msgid ""
+"If you support official conda packages for your project, you may want to "
+"use conda build in Travis, so the building of your recipe is tested as "
+"well."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:97
+msgid "Include the conda recipe in the same directory as your source code."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:100
+msgid "In your ``.travis.yml`` file, replace the following line:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:106
+msgid "with these lines:"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:114
+msgid ""
+"For more information on building conda packages, see :doc:`build-"
+"packages/index` and :doc:`build-packages/sample-recipes`."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:120
+msgid "AppVeyor"
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:122
+msgid ""
+"`AppVeyor <http://www.appveyor.com/>`_ is a continuous build service for "
+"Windows built on Azure and is an alternative to using Travis CI with "
+"conda."
+msgstr ""
+
+#: ../../source/user-guide/tasks/use-conda-with-travis-ci.rst:126
+msgid ""
+"For an example project building conda packages on AppVeyor, see "
+"https://github.com/rmcgibbo/python-appveyor-conda-example."
+msgstr ""
+

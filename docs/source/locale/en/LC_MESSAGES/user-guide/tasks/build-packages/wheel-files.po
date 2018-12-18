@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 12:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:3
+msgid "Using wheel files with conda"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:5
+msgid ""
+"If you have software in a `Python wheel file "
+"<https://pythonwheels.com/>`_ and want to use it with conda or install it"
+" in a conda environment, there are three ways."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:9
+msgid ""
+"The best way is to obtain the source code for the software and build a "
+"conda package from the source and not from a wheel. This helps ensure "
+"that the new package uses other conda packages to satisfy its "
+"dependencies."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:13
+msgid ""
+"The second best way is to build a conda package from the wheel file. This"
+" tells conda more about the files present than a pip install. It is also "
+"less likely than a pip install to cause errors by overwriting (or "
+"\"clobbering\") files. Building a conda package from the wheel file also "
+"has the advantage that any clobbering is more likely to happen at build "
+"time and not runtime."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:19
+msgid ""
+"The third way is to use pip to install a wheel file into a conda "
+"environment. Some conda users have used this option safely. The first two"
+" ways are still the safest and most reliable."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:25
+msgid "Building a conda package from a wheel file"
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:27
+msgid ""
+"To build a conda package from a wheel file, install the .whl file in the "
+"conda recipe's ``bld.bat`` or ``build.sh`` file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:30
+msgid ""
+"You may download the .whl file in the source section of the conda "
+"recipe's ``meta.yaml`` file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:33
+msgid "You may instead put the URL directly in the ``pip install`` command."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:35
+msgid ""
+"EXAMPLE: The conda recipe for TensorFlow has a ``pip install`` command in"
+" `build.sh <https://github.com/conda/conda-"
+"recipes/blob/a796713805ac8eceed191c0cb475b51f4d00718c/python/tensorflow/build.sh#L7>`_"
+" with the URL of a .whl file. The `meta.yaml <https://github.com/conda"
+"/conda-"
+"recipes/blob/a796713805ac8eceed191c0cb475b51f4d00718c/python/tensorflow/meta.yaml>`_"
+" file does not download or list the .whl file."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:41
+msgid ""
+"NOTE: It is important to ``pip install`` only the one desired package. "
+"Whenever possible, install dependencies with conda and not pip."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:44
+msgid ""
+"We strongly recommend using the ``--no-deps`` option in the ``pip "
+"install`` command."
+msgstr ""
+
+#: ../../source/user-guide/tasks/build-packages/wheel-files.rst:47
+msgid ""
+"If you run ``pip install`` without the ``--no-deps`` option, pip will "
+"often install dependencies in your conda recipe and those dependencies "
+"will become part of your package. This wastes space in the package and "
+"increases the risk of file overlap, file clobbering, and broken packages."
+msgstr ""
+
