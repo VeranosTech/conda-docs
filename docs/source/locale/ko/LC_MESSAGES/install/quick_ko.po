@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 13:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/install/quick_ko.rst:2
+msgid "빠른 설치"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:4
+msgid "Contents"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:6
+msgid ""
+"콘다는 크로스 플랫폼 패키지, 환경 관리자로 패키지와 그 하위 요소를 설치, 실행, 업데이트 한다. 사용자의 로컬 컴퓨터 상에서 "
+"콘다를 사용해 손쉽게 환경을 설정하고 전환할 수 있다. 콘다는 모든 버전의 **아나콘다** 와 **미니콘다** 를 포함한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:10
+msgid ""
+"콘다를 설치하는 가장 빠른 방법은 `미니콘다 다운로드 <https://conda.io/miniconda.html>`_ 이다. "
+"미니콘다란 아나콘다 미니 버전으로 콘다와 그 하위 요소만을 포함한다. 아나콘다는 720개가 넘는 오픈 소스 패키지를 포함하고 "
+"아나콘다로 설치하거나 ``conda install`` 커맨드로 설치할 수 있다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:14
+msgid ""
+"디폴트 구성에서 콘다는 repo.continuum.io 로부터 가져온 수백여개의 패키지를 사용한다. 이 패키지들은 Continuum"
+" Analytics 에 의해 개발되어 관리된다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:16
+msgid ""
+"팁: 720 여개의 오픈소스 패키지를 포함하는 아나콘다를 사용하고자 하고 시간과 디스크 공간의 여유가 있다면 다음 예시들에서 "
+"\"Miniconda\" 를 \"Anaconda\" 로 바꾸면 된다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:20
+msgid "미니콘다 빠른 설치 요구사항"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:22
+msgid "32비트 또는 64비트 컴퓨터, 400MB 여유 공간, 리눅스, OS X, 윈도우"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:24
+msgid "주의: 아나콘다 풀버전을 설치하려면 3GB 의 여유 공간이 필요하다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:28
+msgid "윈도우 미니콘다 설치"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:30
+msgid ""
+"브라우저에서 `미니콘다 윈도우 인스톨러 <https://conda.io/miniconda.html>`_ 를 다운로드하고 .exe "
+"파일을 더블클릭 한 후에 지시에 따라 설치하면 된다. 설정에 대한 확신이 없다면 일단 디폴트로 설정하고 후에 변경하면 된다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:33
+msgid "주의: 설치가 완료되면 새로운 터미널창이 나타난다. 터미널창이 뜨지 않으면 \"시작 - 실행 - 커맨드 프롬프트\" 를 클릭하자."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:35 ../../source/install/quick_ko.rst:61
+#: ../../source/install/quick_ko.rst:90
+msgid "설치를 확인하기 위해 ``conda list`` 커맨드를 입력한다. 설치가 제대로 완료 되었다면 설치된 패키지들이 나열된다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:37 ../../source/install/quick_ko.rst:63
+#: ../../source/install/quick_ko.rst:92
+msgid "다음은 :doc:`30분 콘다 테스트 드라이브 </test-drive_ko>` 를 보자."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:39
+msgid "**윈도우 미니콘다 업데이트**"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:41
+msgid ""
+"터미널창을 열고 \"시작 - 실행 - 커맨드 프롬프트\" 로 터미널창을 열고 아나콘다 폴더에 들어가자. 그리고 ``conda "
+"update conda`` 를 입력한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:43
+msgid "**윈도우 미니콘다 제거**"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:45
+msgid "관리자창에 가서 \"프로그램 추가 제거\" 를 클릭하고 “Python 2.7 (Miniconda)” 를 삭제한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:49
+msgid "OS X 미니콘다 설치"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:51
+msgid ""
+"브라우저에서 `OS X 미니콘다 인스톨러 <https://conda.io/miniconda.html>`_ 를 다운로드 하고 터미널 "
+"창에서 다음 커맨드를 입력하고 설치창에 나타난 프롬프트를 따라 설치한다. 설정에 확신이 없다면 일단 디폴트 대로 설치하고 이후에 "
+"변경할 수 있다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:59 ../../source/install/quick_ko.rst:88
+msgid "터미널 창을 닫고 다시 열어 변경사항이 반영되도록 한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:65
+msgid "**OS X 미니콘다 업데이트**"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:67
+msgid "터미널창을 열고 미니콘다 디렉토리로 간다. ``conda update conda`` 를 입력한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:69
+msgid "**OS X 미니콘다 제거**"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:71 ../../source/install/quick_ko.rst:100
+msgid ""
+"터미널창을 열고 미니콘다 설치 디렉토리를 삭제한다.: ``rm -rf ~/miniconda`` ``~/.bash_profile`` "
+"파일을 수정해 ``PATH`` 환경 변수에서 미니콘다 디렉토리를 삭제할 수도 있다. 숨겨진 파일인 .condarc 와 .conda "
+".continuum 디렉토리 (홈 디렉토리로 설정되어 있을 것) 을 삭제한다.: ``rm -rf ~/.condarc ~/.conda"
+" ~/.continuum``"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:78
+msgid "리눅스 미니콘다 설치"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:80
+msgid ""
+"브라우저에서 `리눅스 미니콘다 인스톨러 <https://conda.io/miniconda.html>`_ 를 다운로드 한다. 터미널 "
+"창에서 다음 커맨드를 입력하고 설치창에 나타난 프롬프트를 따라 설치한다. 설정에 확신이 없다면 일단 디폴트 대로 설치하고 이후에 "
+"변경할 수 있다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:94
+msgid "**리눅스 미니콘다 업데이트**"
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:96
+msgid "터미널창에서 ``conda update conda`` 를 입력한다."
+msgstr ""
+
+#: ../../source/install/quick_ko.rst:98
+msgid "**리눅스 미니콘다 제거**"
+msgstr ""
+

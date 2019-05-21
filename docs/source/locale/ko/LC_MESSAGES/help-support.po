@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conda  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-11 11:28+0900\n"
+"POT-Creation-Date: 2019-05-21 13:16+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,8 @@ msgid ""
 "Get free community support with our `Google group "
 "<https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_."
 msgstr ""
-"구글 그룹 <https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_\ 에서 "
+"구글 그룹 "
+"<https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_\\ 에서 "
 "무료 커뮤니티 지원을 받을 수 있다."
 
 #: ../../source/help-support.rst:8
@@ -68,59 +69,58 @@ msgstr ""
 #: ../../source/help-support.rst:37
 msgid ""
 "Submit new recipes to the GitHub repository at https://github.com/conda"
-"/conda-recipes. Building recipes is described in :doc:`user-guide/tasks"
-"/build-packages/index`. When you build a new conda recipe for a program "
-"not yet listed in the repository, use a GitHub pull request to submit it "
-"to the repository, so that others using that program in the future can "
-"reuse it. Recipes are welcome for programs that use any license, such as "
-"GPL, BSD, MIT or Apache, and all of the recipes in this repository are "
-"released into the public domain."
+"/conda-recipes. When you build a new conda recipe for a program not yet "
+"listed in the repository, use a GitHub pull request to submit it to the "
+"repository, so that others using that program in the future can reuse it."
+" Recipes are welcome for programs that use any license, such as GPL, BSD,"
+" MIT or Apache, and all of the recipes in thisrepository are released "
+"into the public domain."
 msgstr ""
 
-#: ../../source/help-support.rst:49
+#: ../../source/help-support.rst:48
 msgid "Report bugs"
 msgstr ""
 
-#: ../../source/help-support.rst:51
+#: ../../source/help-support.rst:50
 msgid ""
 "If you find a bug, search to see if it has already been reported, and "
 "then report it if no one else has."
 msgstr ""
 
-#: ../../source/help-support.rst:54
+#: ../../source/help-support.rst:53
 msgid ""
 "Issues with the conda documentation are tracked on GitHub at "
 "https://github.com/conda/conda-docs/issues."
 msgstr ""
 
-#: ../../source/help-support.rst:57
+#: ../../source/help-support.rst:56
 msgid ""
 "For issues with conda, conda-build, repo.anaconda.com, anaconda.org, and "
 "specific conda packages, please see :ref:`new-issues`."
 msgstr ""
 
-#: ../../source/help-support.rst:61
+#: ../../source/help-support.rst:60
 msgid "Presentations and blog posts"
 msgstr ""
 
-#: ../../source/help-support.rst:63
+#: ../../source/help-support.rst:62
 msgid ""
 "`Packaging and Deployment with conda---Travis Oliphant "
 "<https://speakerdeck.com/teoliphant/packaging-and-deployment-with-"
 "conda>`_."
 msgstr ""
 
-#: ../../source/help-support.rst:66
+#: ../../source/help-support.rst:65
 msgid ""
 "`Anaconda Developer Blog <https://www.anaconda.com/blog/developer-"
 "blog/>`_."
 msgstr ""
 
-#: ../../source/help-support.rst:70
+#: ../../source/help-support.rst:69
 msgid "Conda announcements list"
 msgstr ""
 
-#: ../../source/help-support.rst:72
+#: ../../source/help-support.rst:71
 msgid ""
 "Conda Announcements is a low-traffic email list for news and updates "
 "directly from the conda core team. By providing your email address below,"
@@ -128,30 +128,30 @@ msgid ""
 "never sell, give away or distribute your email address to third parties."
 msgstr ""
 
-#: ../../source/help-support.rst:78
+#: ../../source/help-support.rst:77
 msgid "No more than 1 email per week, usually less."
 msgstr ""
 
-#: ../../source/help-support.rst:79
+#: ../../source/help-support.rst:78
 msgid "Project announcements relevant to all conda users."
 msgstr ""
 
-#: ../../source/help-support.rst:80
+#: ../../source/help-support.rst:79
 msgid "No corporate marketing hype."
 msgstr ""
 
-#: ../../source/help-support.rst:81
+#: ../../source/help-support.rst:80
 msgid "No spam."
 msgstr ""
 
-#: ../../source/help-support.rst:83
+#: ../../source/help-support.rst:82
 msgid ""
 "For convenience, we use MailChimp to manage subscriptions, including "
 "`archived announcements <http://us13.campaign-"
 "archive1.com/home/?u=28f85eefa68de727efcbd93f9&id=cb4ca49e7d>`_."
 msgstr ""
 
-#: ../../source/help-support.rst:87
+#: ../../source/help-support.rst:86
 msgid ""
 "Upon clicking the \"Consent and Subscribe\" button, you will receive an "
 "email that contains a link to confirm your subscription. You must click "
@@ -159,4 +159,23 @@ msgid ""
 "clicking the \"Unsubscribe\" link included in any email we send through "
 "this announcement list, or by contacting privacy@anaconda.com."
 msgstr ""
+
+#~ msgid ""
+#~ "Submit new recipes to the GitHub "
+#~ "repository at https://github.com/conda/conda-"
+#~ "recipes. Building recipes is described "
+#~ "in :doc:`user-guide/tasks/build-packages/index`. "
+#~ "When you build a new conda recipe"
+#~ " for a program not yet listed "
+#~ "in the repository, use a GitHub "
+#~ "pull request to submit it to the"
+#~ " repository, so that others using "
+#~ "that program in the future can "
+#~ "reuse it. Recipes are welcome for "
+#~ "programs that use any license, such "
+#~ "as GPL, BSD, MIT or Apache, and"
+#~ " all of the recipes in this "
+#~ "repository are released into the public"
+#~ " domain."
+#~ msgstr ""
 
