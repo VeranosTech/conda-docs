@@ -38,7 +38,6 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.inheritance_diagram',
     # 'sphinx.ext.napoleon',
-    'numpydoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -192,6 +191,7 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'condadoc'
 
+html_style = 'css/custom.css'
 
 # -- Options for LaTeX output --------------------------------------------------
 
