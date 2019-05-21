@@ -1,0 +1,77 @@
+
+.. _index_ref:
+
+conda index
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda index
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage: conda-index [-h] [-c] [-n CHANNEL_NAME] [-s SUBDIR] [-t THREADS]
+   
+                 [-p PATCH_GENERATOR]  [--hotfix-source-repo  HOTFIX_SOURCE_REPO]
+                 [--verbose] [--no-progress] [dir [dir ...]]
+   
+          Update package index metadata files in given directories.
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>positional</B> <B>arguments:</B>
+          dir    Directory that contains an index to be updated.
+   
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+          <B>-c</B>, <B>--check-md5</B>
+                 Use hash values instead of file modification times for determin-
+                 ing if a package's metadata needs to be updated.
+   
+          <B>-n</B> CHANNEL_NAME, <B>--channel-name</B> CHANNEL_NAME
+                 Customize the channel name listed in each channel's  index.html.
+   
+          <B>-s</B> SUBDIR, <B>--subdir</B> SUBDIR
+                 Optional.  The  subdir to index. Can be given multiple times. If
+                 not  provided,  will  default  to  all  of  linux-64,  linux-32,
+                 linux-ppc64le,    linux-armv6l,   linux-armv7l,   linux-aarch64,
+                 win-64, win-32, osx-64, zos-z, noarch.  If  provided,  will  not
+                 create channeldata.json for the channel.
+   
+          <B>-t</B> THREADS, <B>--threads</B> THREADS
+   
+          <B>-p</B> PATCH_GENERATOR, <B>--patch-generator</B> PATCH_GENERATOR
+                 Path to Python file that outputs metadata patch instructions
+   
+          <B>--hotfix-source-repo</B> HOTFIX_SOURCE_REPO
+                 URL of git repo that hosts your metadata patch instructions
+   
+          <B>--verbose</B>
+                 show extra debugging info
+   
+          <B>--no-progress</B>
+                 Hide progress bars
+   
+      <B>conda</B> <B>commands</B> <B>available</B> <B>from</B> <B>other</B> <B>packages:</B>
+                 build convert debug develop env index inspect metapackage render
+                 server skeleton verify
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

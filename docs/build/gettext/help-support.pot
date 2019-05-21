@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 13:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/help-support.rst:3
+msgid "Help and support"
+msgstr ""
+
+#: ../../source/help-support.rst:5
+msgid "Get free community support with our `Google group <https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_."
+msgstr ""
+
+#: ../../source/help-support.rst:8
+msgid "Paid `support <https://www.anaconda.com/support/>`_, `training <https://www.anaconda.com/training/>`_ and `consulting <https://www.anaconda.com/consulting/>`_ options are available. Our teaching philosophy is that the best way to learn is with hands-on experience addressing real-world problems. Courses are available to individuals online, at numerous sites, or in-house at your place of business. We also offer consulting services for the analysis, management and visualization of scientific and business data or optimizing your processing workflows on modern hardware and GPUs."
+msgstr ""
+
+#: ../../source/help-support.rst:19
+msgid "Support is included in purchases of `Anaconda Enterprise <https://www.anaconda.com/enterprise/>`_."
+msgstr ""
+
+#: ../../source/help-support.rst:24
+msgid "Join the conda email group"
+msgstr ""
+
+#: ../../source/help-support.rst:26
+msgid "Join the mailing lists for both `Anaconda <https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda>`_ and `conda <https://groups.google.com/a/anaconda.com/forum/#!forum/conda>`_. Ask questions, answer questions, discuss ways to use conda, request new features and submit any other comments you may have."
+msgstr ""
+
+#: ../../source/help-support.rst:35
+msgid "Contribute recipes to GitHub"
+msgstr ""
+
+#: ../../source/help-support.rst:37
+msgid "Submit new recipes to the GitHub repository at https://github.com/conda/conda-recipes. When you build a new conda recipe for a program not yet listed in the repository, use a GitHub pull request to submit it to the repository, so that others using that program in the future can reuse it. Recipes are welcome for programs that use any license, such as GPL, BSD, MIT or Apache, and all of the recipes in thisrepository are released into the public domain."
+msgstr ""
+
+#: ../../source/help-support.rst:48
+msgid "Report bugs"
+msgstr ""
+
+#: ../../source/help-support.rst:50
+msgid "If you find a bug, search to see if it has already been reported, and then report it if no one else has."
+msgstr ""
+
+#: ../../source/help-support.rst:53
+msgid "Issues with the conda documentation are tracked on GitHub at https://github.com/conda/conda-docs/issues."
+msgstr ""
+
+#: ../../source/help-support.rst:56
+msgid "For issues with conda, conda-build, repo.anaconda.com, anaconda.org, and specific conda packages, please see :ref:`new-issues`."
+msgstr ""
+
+#: ../../source/help-support.rst:60
+msgid "Presentations and blog posts"
+msgstr ""
+
+#: ../../source/help-support.rst:62
+msgid "`Packaging and Deployment with conda---Travis Oliphant <https://speakerdeck.com/teoliphant/packaging-and-deployment-with-conda>`_."
+msgstr ""
+
+#: ../../source/help-support.rst:65
+msgid "`Anaconda Developer Blog <https://www.anaconda.com/blog/developer-blog/>`_."
+msgstr ""
+
+#: ../../source/help-support.rst:69
+msgid "Conda announcements list"
+msgstr ""
+
+#: ../../source/help-support.rst:71
+msgid "Conda Announcements is a low-traffic email list for news and updates directly from the conda core team. By providing your email address below, you consent to join Conda Announcements. It is not a marketing list. We never sell, give away or distribute your email address to third parties."
+msgstr ""
+
+#: ../../source/help-support.rst:77
+msgid "No more than 1 email per week, usually less."
+msgstr ""
+
+#: ../../source/help-support.rst:78
+msgid "Project announcements relevant to all conda users."
+msgstr ""
+
+#: ../../source/help-support.rst:79
+msgid "No corporate marketing hype."
+msgstr ""
+
+#: ../../source/help-support.rst:80
+msgid "No spam."
+msgstr ""
+
+#: ../../source/help-support.rst:82
+msgid "For convenience, we use MailChimp to manage subscriptions, including `archived announcements <http://us13.campaign-archive1.com/home/?u=28f85eefa68de727efcbd93f9&id=cb4ca49e7d>`_."
+msgstr ""
+
+#: ../../source/help-support.rst:86
+msgid "Upon clicking the \"Consent and Subscribe\" button, you will receive an email that contains a link to confirm your subscription. You must click this link to activate your subscription. You can opt-out at any time by clicking the \"Unsubscribe\" link included in any email we send through this announcement list, or by contacting privacy@anaconda.com."
+msgstr ""
+

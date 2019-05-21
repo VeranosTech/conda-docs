@@ -1,0 +1,26 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 13:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/help/support_ko.rst:3
+msgid "지원 옵션"
+msgstr ""
+
+#: ../../source/help/support_ko.rst:5
+msgid "사람으로부터 도움을 받고 싶다면? 오픈소스 커뮤니티는 비용 없이 도움을 줄 준비가 되어있다. Continuum Analytics 는 시간별 지원 패키지와 몇몇 구매를 포함하는 지원을 제공한다. `Continuum Analytics 지원 페이지 <http://continuum.io/support>`_ 에서 현재 지원 옵션을 보자."
+msgstr ""
+

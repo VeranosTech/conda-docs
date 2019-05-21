@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>전체 설치 &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>전체 설치</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/install/full_ko.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><a class="toc-backref" href="#id10">전체 설치</a><a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id10">전체 설치</a><ul>
+<li><a class="reference internal" href="#id3" id="id11">아나콘다 요구사양</a></li>
+<li><a class="reference internal" href="#id4" id="id12">설치 설명서</a><ul>
+<li><a class="reference internal" href="#id5" id="id13">윈도우 아나콘다 설치</a></li>
+<li><a class="reference internal" href="#os-x" id="id14">OS X 아나콘다 설치</a></li>
+<li><a class="reference internal" href="#id8" id="id15">리눅스 아나콘다 설치</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>콘다는 크로스 플랫폼 패키지, 환경 관리자로 패키지와 그 하위 요소를 설치, 실행, 업데이트 한다.
+사용자의 로컬 컴퓨터 상에서 콘다를 사용해 손쉽게 환경을 설정하고 전환할 수 있다.
+콘다는 모든 버전의 <strong>아나콘다, 아나콘다 서버</strong> 와 <strong>미니콘다</strong> 를 포함한다.</p>
+<p>시간에 쫓긴다면 <a class="reference internal" href="quick_ko.html"><span class="doc">미니콘다 빠른 설치</span></a> 를 시도해 보자. 2분이 소요된다.
+미니콘다는 콘다, 콘다 빌드와 그 하위요소만 포함하므로 빠르고 깔끔하게 설치할 수 있다.</p>
+<p>이 설명은 아나콘다의 전체 설치를 다루고 있다. 전체 설치에는 콘다, 콘다 빌드 외에도 150여개의 오픈소스 패키지가 포함된다.</p>
+<p>전체 설치는 윈도우, OS X, 리눅스에서 로컬 유저의 아나콘다 설치를 위한 가장 좋은 방법이다.
+관리자의 허용을 필요로 하지 않으면서 가장 강력한 설치이기 때문이다.
+운영체제에 관계 없이 아나콘다는 시스템 전역 설치도 지원한다. 이 방법은 관리자의 허용을 필요로 한다.</p>
+<p>팁: OS X 또는 윈도우에서 그래픽 인스톨러를 통한 설치 가이드가 필요하다면 <a class="reference external" href="http://docs.continuum.io/anaconda/install.html">아나콘다 설치</a> 페이지를 보자.</p>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id11">아나콘다 요구사양</a><a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p>32비트 또는 64비트 컴퓨터, 32MB 여유 공간, 리눅스, OS X, 윈도우</p>
+<p>아나콘다 다운로드를 위한 300MB, 아나콘다 설치를 위한 300MB</p>
+<p>주의: 사용자 작성이 가능한 설치 경로가 있다면 관리자 허용 또는 루트 허용 없이 아나콘다 설치를 할 수 있다.</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id12">설치 설명서</a><a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id13">윈도우 아나콘다 설치</a><a class="headerlink" href="#id5" title="제목 주소">¶</a></h3>
+<p>브라우저에서 윈도우를 위한 <a class="reference external" href="http://continuum.io/downloads">아나콘다 인스톨러</a> 를 다운로드 한다.
+.exe 파일을 더블클릭 한 후에 지시에 따라 설치한다. 설정에 대한 확신이 없다면 일단 디폴트로 설정하고 이후에 변경하면 된다.</p>
+<p>주의: 설치가 완료되면 새로운 터미널창이 나타난다. 터미널창이 뜨지 않으면 &quot;시작 - 실행 - 커맨드 프롬프트&quot; 를 클릭하자.</p>
+<p><strong>윈도우 아나콘다 업데이트</strong></p>
+<p>터미널창을 열고 &quot;시작 - 실행 - 커맨드 프롬프트&quot; 로 터미널창을 열고 아나콘다 폴더에 들어가자. 그리고 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">conda</span></code> 를 입력한다.</p>
+<p><strong>윈도우 아나콘다 제거</strong></p>
+<p>관리자창에 가서 &quot;프로그램 추가 제거&quot; 를 클릭하고 “Python 2.7 (Anaconda)” 를 삭제한다.</p>
+</div>
+<div class="section" id="os-x">
+<h3><a class="toc-backref" href="#id14">OS X 아나콘다 설치</a><a class="headerlink" href="#os-x" title="제목 주소">¶</a></h3>
+<p>브라우저에서 OS X 를 위한 <a class="reference external" href="http://continuum.io/downloads">아나콘다 인스톨러</a> 를 다운로드 한다.
+.pkg 파일을 더블클릭 한 후에 지시에 따라 설치한다. 설정에 대한 확신이 없다면 일단 디폴트로 설정하고 이후에 변경하면 된다.</p>
+<p>주의: 설치 후에 터미널창을 닫고 다시 열어야 변경사항이 적용된다.</p>
+<p><strong>OS X 아나콘다 업데이트</strong></p>
+<p>터미널창을 열고 아나콘다 디렉토리로 간다. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">conda</span></code> 를 입력한다.</p>
+<p><strong>OS X 아나콘다 제거</strong></p>
+<p>터미널창을 열고 아나콘다 설치 디렉토리를 삭제한다.: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/anaconda</span></code>
+<code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code> 파일을 수정해 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 환경 변수에서 아나콘다 디렉토리를 삭제할 수도 있다.
+숨겨진 파일인 .condarc 와 .conda .continuum 디렉토리 (홈 디렉토리로 설정되어 있을 것) 을 삭제한다.:
+<code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/.condarc</span> <span class="pre">~/.conda</span> <span class="pre">~/.continuum</span></code></p>
+</div>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id15">리눅스 아나콘다 설치</a><a class="headerlink" href="#id8" title="제목 주소">¶</a></h3>
+<p>브라우저에서 리눅스를 위한 <a class="reference external" href="http://continuum.io/downloads">아나콘다 인스톨러</a> 를 다운로드 한다.
+.pkg 파일을 더블클릭 한 후에 지시에 따라 설치한다. 설정에 대한 확신이 없다면 일단 디폴트로 설정하고 이후에 변경하면 된다.</p>
+<p>터미널 창에서 다음 커맨드를 입력하고 설치창에 나타난 프롬프트를 따라 설치한다.
+설정에 확신이 없다면 일단 디폴트 대로 설치하고 이후에 변경할 수 있다.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">Anaconda</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>주의: 설치 후에 터미널창을 닫고 다시 열어야 변경사항이 적용된다.</p>
+<p><strong>리눅스 아나콘다 업데이트</strong></p>
+<p>터미널창에서 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">conda</span></code> 를 입력한다.</p>
+<p><strong>리눅스 아나콘다 제거</strong></p>
+<p>터미널창을 열고 아나콘다 설치 디렉토리를 삭제한다.: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/anaconda</span></code>
+<code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code> 파일을 수정해 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 환경 변수에서 아나콘다 디렉토리를 삭제할 수도 있다.
+숨겨진 파일인 .condarc 와 .conda .continuum 디렉토리 (홈 디렉토리로 설정되어 있을 것) 을 삭제한다.:
+<code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/.condarc</span> <span class="pre">~/.conda</span> <span class="pre">~/.continuum</span></code></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>conda config &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>conda config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/commands/conda-config.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conda-config">
+<span id="config-ref"></span><h1>conda config<a class="headerlink" href="#conda-config" title="제목 주소">¶</a></h1>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       conda - conda config
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       usage: conda config [-h] [--json] [--debug] [--verbose]
+
+       [--system | <B>--env</B> | <B>--file</B> FILE]
+              (<B>--show</B>  [SHOW  [SHOW  ...]]  |  <B>--show-sources</B>  |  <B>--validate</B> |
+              <B>--describe</B> [DESCRIBE [DESCRIBE ...]] | <B>--write-default</B>  |  <B>--get</B>
+              [KEY  [KEY  ...]]  |  <B>--append</B> KEY VALUE | <B>--prepend</B> KEY VALUE |
+              <B>--set</B> KEY VALUE |  <B>--remove</B>  KEY  VALUE  |  <B>--remove-key</B>  KEY  |
+              <B>--stdin</B>)
+
+       Modify configuration values in .condarc.  This is modeled after the git
+       config command.  Writes to the user .condarc file (<I>user</I> <I>.condarc</I>  <I>path</I>)
+       by default.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>optional</B> <B>arguments:</B>
+       <B>-h</B>, <B>--help</B>
+              Show this help message and exit.
+
+       <B>--json</B> Report all output as json. Suitable for using conda programmati-
+              cally.
+
+       <B>--debug</B>
+              Show debug output.
+
+       <B>--verbose</B>, <B>-v</B>
+              Use once for info, twice for debug, three times for trace.
+
+       <B>--system</B>
+              Write to the system .condarc file (<I>system</I> <I>.condarc</I> <I>path</I>). Other-
+              wise writes to the user config file (<I>user</I> <I>.condarc</I> <I>path</I>).
+
+       <B>--env</B>  Write  to  the active conda environment .condarc file (<I>root</I> <I>pre-</I>
+              <I>fix/envs/conda-docs</I>). If no environment is active, write to  the
+              user config file (<I>user</I> <I>.condarc</I> <I>path</I>).
+
+       <B>--file</B> FILE
+              Write  to  the  given  file. Otherwise writes to the user config
+              file (<I>user</I> <I>.condarc</I> <I>path</I>) or the file path given  by  the  'CON-
+              DARC' environment variable, if it is set (default: <I>user</I> <I>.condarc</I>
+              <I>path</I>).
+
+       <B>--show</B> [SHOW [SHOW ...]]
+              Display configuration values as calculated and compiled.  If  no
+              arguments  given, show information for all configuration values.
+
+       <B>--show-sources</B>
+              Display all identified configuration sources.
+
+       <B>--validate</B>
+              Validate all configuration sources.
+
+       <B>--describe</B> [DESCRIBE [DESCRIBE ...]]
+              Describe given configuration parameters. If no arguments  given,
+              show information for all configuration parameters.
+
+       <B>--write-default</B>
+              Write  the default configuration to a file. Equivalent to `conda
+              config <B>--describe</B> &gt; ~/.condarc`  when  no  <B>--env</B>,  <B>--system</B>,  or
+              <B>--file</B> flags are given.
+
+       <B>--get</B> [KEY [KEY ...]]
+              Get a configuration value.
+
+       <B>--append</B> KEY VALUE
+              Add one configuration value to the end of a list key.
+
+       <B>--prepend</B> KEY VALUE, <B>--add</B> KEY VALUE
+              Add one configuration value to the beginning of a list key.
+
+       <B>--set</B> KEY VALUE
+              Set a boolean or string key
+
+       <B>--remove</B> KEY VALUE
+              Remove  a  configuration value from a list key. This removes all
+              instances of the value.
+
+       <B>--remove-key</B> KEY
+              Remove a configuration key (and all its values).
+
+       <B>--stdin</B>
+              Apply configuration  information  given  in  yaml  format  piped
+              through stdin.
+
+              See  `conda  config  <B>--describe</B>`  or  https://conda.io/docs/con-
+              fig.html for details on all the options that can go in .condarc.
+
+              Examples:
+
+              Display all configuration values as calculated and compiled:
+
+              conda config <B>--show</B>
+
+              Display all identified configuration sources:
+
+              conda config <B>--show-sources</B>
+
+              Describe all available configuration options:
+
+              conda config <B>--describe</B>
+
+              Add the conda-canary channel:
+
+              conda config <B>--add</B> channels conda-canary
+
+              Set the output verbosity to level 3 (highest):
+
+              conda config <B>--set</B> verbosity 3
+
+              Get the channels defined in the system .condarc:
+
+              conda config <B>--get</B> channels <B>--system</B>
+
+              Add the 'foo' Binstar channel:
+
+              conda config <B>--add</B> channels foo
+
+              Disable the 'show_channel_urls' option:
+
+              conda config <B>--set</B> show_channel_urls no
+
+
+
+
+</PRE>
+<H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+</PRE></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

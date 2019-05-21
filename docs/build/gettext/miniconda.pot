@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Anaconda, Inc.
+# This file is distributed under the same license as the Conda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Conda  \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 13:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/miniconda.rst:2
+msgid "Miniconda"
+msgstr ""
+
+#: ../../source/miniconda.rst:5
+msgid "Windows"
+msgstr ""
+
+#: ../../source/miniconda.rst:5
+msgid "Mac OS X"
+msgstr ""
+
+#: ../../source/miniconda.rst:5
+msgid "Linux"
+msgstr ""
+
+#: ../../source/miniconda.rst:7
+msgid "Python 3.7"
+msgstr ""
+
+#: ../../source/miniconda.rst:7
+msgid "`64-bit (exe installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-Window s-x86_64.exe>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:14
+msgid "`32-bit (exe installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-Window s-x86.exe>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:7
+msgid "`64-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-MacOSX -x86_64.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:14
+msgid "`64-bit (.pkg installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-MacOSX -x86_64.pkg>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:7
+msgid "`64-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-Linux- x86_64.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:14
+msgid "`32-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda3-latest-Linux- x86.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:21
+msgid "Python 2.7"
+msgstr ""
+
+#: ../../source/miniconda.rst:21
+msgid "`64-bit (exe installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-Window s-x86_64.exe>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:28
+msgid "`32-bit (exe installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-Window s-x86.exe>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:21
+msgid "`64-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-MacOSX -x86_64.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:28
+msgid "`64-bit (.pkg installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-MacOSX -x86_64.pkg>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:21
+msgid "`64-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-Linux- x86_64.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:28
+msgid "`32-bit (bash installer) <https: //repo.anaconda.co m/miniconda/Minico nda2-latest-Linux- x86.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:36
+msgid "`Installation instructions <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:39
+msgid "Other resources:"
+msgstr ""
+
+#: ../../source/miniconda.rst:41
+msgid "`Miniconda with Python 3.7 for Power8 & Power9 <https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-ppc64le.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:43
+msgid "`Miniconda with Python 2.7 for Power8 & Power9 <https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-ppc64le.sh>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:45
+msgid "`Miniconda Docker images <https://hub.docker.com/r/continuumio/>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:47
+msgid "`Miniconda AWS images <https://aws.amazon.com/marketplace/seller-profile?id=29f81979-a535-4f44-9e9f-6800807ad996>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:49
+msgid "`Archive and MD5 sums for the installers <https://repo.anaconda.com/miniconda/>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:51
+msgid "`conda change log <https://conda.io/projects/continuumio-conda/en/latest/release-notes.html>`__"
+msgstr ""
+
+#: ../../source/miniconda.rst:54
+msgid "These Miniconda installers contain the conda package manager and Python. Once Miniconda is installed, you can use the conda command to install any other packages and create environments, etc. For example:"
+msgstr ""
+
+#: ../../source/miniconda.rst:71
+msgid "There are two variants of the installer: Miniconda is Python 2 based and Miniconda3 is Python 3 based. Note that the choice of which Miniconda is installed only affects the root environment. Regardless of which version of Miniconda you install, you can still install both Python 2.x and Python 3.x environments."
+msgstr ""
+
+#: ../../source/miniconda.rst:79
+msgid "The other difference is that the Python 3 version of Miniconda will default to Python 3 when creating new environments and building packages. So for instance, the behavior of:"
+msgstr ""
+
+#: ../../source/miniconda.rst:92
+msgid "will be to install Python 2.7 with the Python 2 Miniconda and to install Python 3.7 with the Python 3 Miniconda. You can override the default by explicitly setting ``python=2`` or ``python=3``. It also determines the default value of ``CONDA_PY`` when using ``conda build``."
+msgstr ""
+
+#: ../../source/miniconda.rst:100
+msgid "If you already have Miniconda or Anaconda installed, and you just want to upgrade, you should not use the installer. Just use ``conda update``."
+msgstr ""
+
+#: ../../source/miniconda.rst:104
+msgid "For instance:"
+msgstr ""
+
+#: ../../source/miniconda.rst:114
+msgid "will update conda."
+msgstr ""
+

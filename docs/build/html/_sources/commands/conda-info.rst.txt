@@ -1,0 +1,81 @@
+
+.. _info_ref:
+
+conda info
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda info
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage:  conda info [-h] [--json] [--debug] [--verbose] [--offline] [-a]
+          [-e]
+   
+                 [-l] [-s] [--base] [--unsafe-channels] [packages [packages ...]]
+   
+          Display information about current conda install.
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>positional</B> <B>arguments:</B>
+          packages
+                 Display information about packages.
+   
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+          <B>--json</B> Report all output as json. Suitable for using conda programmati-
+                 cally.
+   
+          <B>--debug</B>
+                 Show debug output.
+   
+          <B>--verbose</B>, <B>-v</B>
+                 Use once for info, twice for debug, three times for trace.
+   
+          <B>--offline</B>
+                 Offline mode, don't connect to the Internet.
+   
+          <B>-a</B>, <B>--all</B>
+                 Show all information, (environments, license, and system  infor-
+                 mation.
+   
+          <B>-e</B>, <B>--envs</B>
+                 List all known conda environments.
+   
+          <B>-l</B>, <B>--license</B>
+                 Display information about the local conda licenses list.
+   
+          <B>-s</B>, <B>--system</B>
+                 List environment variables.
+   
+          <B>--base</B> Display base environment path.
+   
+          <B>--unsafe-channels</B>
+                 Display list of channels with tokens exposed.
+   
+   
+   </PRE>
+   <H2>EXAMPLES</H2><PRE>
+                 conda info -a
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

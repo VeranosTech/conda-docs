@@ -1,0 +1,67 @@
+
+.. _package_ref:
+
+conda package
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda package
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage:  conda  package  [-h]  [-n ENVIRONMENT | <B>-p</B> PATH] [-w PATH [PATH
+          ...]] [-r]
+   
+          [-u] [--pkg-name PKG_NAME] [--pkg-version PKG_VERSION]
+                 [--pkg-build PKG_BUILD]
+   
+          Low-level conda package utility. (EXPERIMENTAL)
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+          <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
+                 Name of environment.
+   
+          <B>-p</B> PATH, <B>--prefix</B> PATH
+                 Full path to environment prefix.
+   
+          <B>-w</B> PATH [PATH ...], <B>--which</B> PATH [PATH ...]
+                 Given some PATH print which conda package the file came from.
+   
+          <B>-r</B>, <B>--reset</B>
+                 Remove all untracked files and exit.
+   
+          <B>-u</B>, <B>--untracked</B>
+                 Display all untracked files and exit.
+   
+          <B>--pkg-name</B> PKG_NAME
+                 Package name of the created package.
+   
+          <B>--pkg-version</B> PKG_VERSION
+                 Package version of the created package.
+   
+          <B>--pkg-build</B> PKG_BUILD
+                 Package build number of the created package.
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

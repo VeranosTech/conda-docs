@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conda &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="Conda" href="conda.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Conda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conda">
+<h1>Conda<a class="headerlink" href="#conda" title="제목 주소">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/conda_logo.svg"><img alt="_images/conda_logo.svg" src="_images/conda_logo.svg" width="50%" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>파이썬, R, 루비, 루아, 스칼라, 자바, 자바스크립트, C/C++, 포트란 언어를 위한 패키지, 의존성 및 환경 관리 도구</em></p>
+<p>conda는 윈도우, 맥OS, 리눅스에서 쓸 수 있는 오픈소스 패키지 및 환경 관리 시스템이다. conda는 패키지와 의존 요소들을 빠르게 설치, 동작, 업데이트할 수 있다. conda를 사용하면 사용자의 로컬 컴퓨터에서 여러 환경을 생성, 저장, 로드하고 환경간의 전환을 쉽게 할 수 있다. conda는 파이썬으로 만들어졌지만 어떤 언어로 된 소프트웨어든 패키징하고 배포할 수 있다.</p>
+<p>conda는 사용자가 패키지를 찾고 설치하게 도와주는 패키지 관리자다. 만약 여러 버전의 파이썬이 필요한 패키지를 써야 할 때도 별도의 환경 관리자를 사용할 필요가 없다. conda가 환경 관리도 하기 때문이다. 몇 개의 명령만으로 보통 때 사용하는 파이썬 버전을 그대로 사용하면서 다른 버전의 파이썬이 돌아가는 완전히 별개의 환경을 만들 수 있다.</p>
+<p>디폴트 설정에서는 conda를 사용하여 Anaconda® 사에서 관리하는 repo.continuum.io로부터 빌드되어 있는 수천개의 패키지를 설치하거나 관리할 수 있다.</p>
+<p>conda는 트래비스 CI(Travis CI)나 앱베이어(AppVeyor)와 같은 지속적 통합(CI) 시스템과 결합하여 빈번한 코드 테스팅을 자동화할 수 있다.</p>
+<p>The conda package and environment manager is included in all versions of
+Anaconda and Miniconda.
+<a class="reference external" href="https://docs.continuum.io/anaconda-repository/">Anaconda Repository</a>.
+Conda is also included in <a class="reference external" href="https://www.anaconda.com/enterprise/">Anaconda Enterprise</a>, which provides on-site enterprise
+package and environment management for Python, R, Node.js, Java and other
+application stacks. Conda is also available on PyPI, although
+that approach may not be as up to date.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conda.html" class="btn btn-neutral float-right" title="Conda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building conda packages for general code projects &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Building conda packages for general code projects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/build_tutorials/postgis_ko.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-conda-packages-for-general-code-projects">
+<h1>Building conda packages for general code projects<a class="headerlink" href="#building-conda-packages-for-general-code-projects" title="제목 주소">¶</a></h1>
+<div class="section" id="id1">
+<h2>개요<a class="headerlink" href="#id1" title="제목 주소">¶</a></h2>
+<p>콘다 패키지는 프로젝트에 사용된 언어에 관계없이 빌드할 수 있다.
+이 튜토리얼은 <code class="docutils literal notranslate"><span class="pre">postgis</span></code> 패키지로부터 래시피를 작성하는 방법을 다룬다.
+튜토리얼 마지막에서는 패키지를 빌드해 <a class="reference external" href="http://anaconda.org/">anaconda.org</a> 에 업로드하고
+콘다를 사용해 업로드 된 패키지를 설치해 볼 것이다.</p>
+</div>
+<div class="section" id="id2">
+<h2>튜토리얼 대상<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>이 튜토리얼은 파이썬이 아닌 언어를 사용하는 소스코드 프로젝트로부터 콘다 패키지를 빌드하고자 하는 리눅스와 맥 사용자를 위해 작성되었다.
+사용자는 C/C++ 패키지를 구성, 컴파일, 설치하는 방법에 대해 알고 있어야 한다.</p>
+<div class="section" id="id3">
+<h3>콘다 빌드 요약<a class="headerlink" href="#id3" title="제목 주소">¶</a></h3>
+<p>일반 소스코드 패키지로부터 콘다 패키지를 빌드하는 과정은 네단계로 진행된다.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#before-you-start3"><span class="std std-ref">시작에 앞서</span></a></li>
+<li><a class="reference internal" href="#depends"><span class="std std-ref">하위 요소</span></a></li>
+<li><a class="reference internal" href="#conda-recipe"><span class="std std-ref">콘다 래시피</span></a></li>
+<li><a class="reference internal" href="#build-script"><span class="std std-ref">빌드 스크립트</span></a></li>
+<li><a class="reference internal" href="#build-postgis"><span class="std std-ref">패키지 빌드</span></a></li>
+<li><a class="reference internal" href="#install"><span class="std std-ref">패키지 배포와 설치</span></a></li>
+<li><a class="reference internal" href="#help3"><span class="std std-ref">트러블 슈팅과 추가 정보</span></a></li>
+</ol>
+</div>
+</div>
+<div class="section" id="before-you-start3">
+<span id="id4"></span><h2>시작에 앞서<a class="headerlink" href="#before-you-start3" title="제목 주소">¶</a></h2>
+<p><a class="reference external" href="https://conda.io/docs/install/quick.html">미니콘다</a> 또는 <a class="reference external" href="https://docs.continuum.io/anaconda/install">아나콘다</a> 가 설치되어 있어야 한다..</p>
+<p>conda-build 설치:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install conda-build
+</pre></div>
+</div>
+<p>콘다와 콘다 빌드는 최신버전을 권장한다. 아래 커맨드로 업데이트 하자.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda upgrade conda
+conda upgrade conda-build
+</pre></div>
+</div>
+<p>직접 콘다 패키지를 빌드할 준비가 되었다.</p>
+</div>
+<div class="section" id="depends">
+<span id="id7"></span><h2>하위 요소<a class="headerlink" href="#depends" title="제목 주소">¶</a></h2>
+<p>콘다 래시피를 생성함에 있어 가장 중요한 부분은 하위 요소를 올바르게 나열하는 것이다.</p>
+<p><a class="reference external" href="https://github.com/postgis/postgis/blob/2.2.2/README.postgis">README.postgis</a> 파일은 다음 패키지에 요구되는 최소한의 버전을 명시한다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>postgresql version <span class="m">9</span>.1
+proj4 version <span class="m">4</span>.0.6
+geos version <span class="m">3</span>.4
+libxml2 version <span class="m">2</span>.5
+json-c version <span class="m">0</span>.9
+gdal version <span class="m">1</span>.9
+</pre></div>
+</div>
+<p>각각의 하위 요소를 위한 콘다 패키지가 존재해야 한다.
+이는 콘다 빌드가 <code class="docutils literal notranslate"><span class="pre">postgis</span></code> 소스코드를 설치할 비공개 환경을 생성하고 필요한 모든 하위 요소를 생성된 환경에 설치하기 때문이다.</p>
+<p>conda search 커맨드를 사용해 위의 하위 요소들을 검색한다. 디폴트 채널에서 찾을 수 없는 패키지는 <code class="docutils literal notranslate"><span class="pre">json-c</span></code> 뿐이다.
+이 패키지를 설치하기 위해 conda config 커맨드를 사용해 <code class="docutils literal notranslate"><span class="pre">jlaura</span></code> 채널을 추가한다.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels jlaura
+</pre></div>
+</div>
+<p>이제 모든 하위요소 패키지를 설치할 수 있게 되었다. 다음 단계에서 콘다 래시피를 작성한다.</p>
+</div>
+<div class="section" id="conda-recipe">
+<span id="id8"></span><h2>콘다 래시피<a class="headerlink" href="#conda-recipe" title="제목 주소">¶</a></h2>
+<p>콘다 래시피를 생성하는 첫 단계는 래시피가 저장될 디렉토리를 만드는 것이다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir postgis
+<span class="nb">cd</span> postgis
+</pre></div>
+</div>
+<p>콘다 래시피에는 세개의 주요 성분이 있다. 패키지명과 버전, 소스코드의 경로, 패키지 빌드와 실행에 필요한 하위 패키지가 그 주요 성분이다.</p>
+<p>콘다 래시피의 소스코드 경로를 지정하는 방법은 여러 가지가 있다.
+이번 예시에서는 Github 저장소의 경로와 사용하고자 하는 특정 리비전 태그를 지정함으로써 소스코드 경로를 설정한다.</p>
+<p>주의: 모든 Github 저장소가 리비전 태그를 사용하는 것은 아니다. 몇몇 경우에는 최신 커밋이 나을 수 있다.</p>
+<p>텍스트 편집기를 열고 postgis 디렉토리의 meta.yaml 파일에 다음과 같이 작성한다.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">package</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postgis</span>
+  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&quot;2.2.2&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">source</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">git_rev</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2.2.2</span>
+  <span class="l l-Scalar l-Scalar-Plain">git_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/postgis/postgis.git</span>
+
+<span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">number</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="l l-Scalar l-Scalar-Plain">requirements</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gdal</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">geos</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">proj4</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">json-c</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">libxml2</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgresql &gt;=9.1</span>
+  <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gdal</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">geos</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">proj4</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">json-c</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">libxml2</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgresql &gt;=9.1</span>
+
+<span class="l l-Scalar l-Scalar-Plain">about</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">home</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">http://postgis.net</span>
+  <span class="l l-Scalar l-Scalar-Plain">license</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">GPL2</span>
+</pre></div>
+</div>
+<p>주의: 콘다 빌드는 격리된 환경에 패키지를 빌드한다. 이 환경은 빌드 하위요소에 의해 지정된 패키지로 구성된다.
+사용자의 작업 환경에 패키지를 설치하는 것은 콘다 빌드에 영향을 주지 않는다.</p>
+</div>
+<div class="section" id="build-script">
+<span id="id9"></span><h2>빌드 스크립트<a class="headerlink" href="#build-script" title="제목 주소">¶</a></h2>
+<p>콘다 래시피를 준비하기 위한 마지막 단계는 빌드 스크립트를 작성하는 것이다.
+<code class="docutils literal notranslate"><span class="pre">postgis</span></code> 가 리눅스와 맥을 위해 빌드 되었기 때문에 postgis 디렉토리의 build.sh 파일을 작성한다.</p>
+<p>빌드 스크립트 파일은 소스 프로젝트를 구성, 빌드, 설치하기 위해 필요한 모든 커맨드를 포함한다.
+이 스크립트는 반드시 사용자 간섭 없이 실행 되어야 한다.</p>
+<p><a class="reference external" href="http://postgis.net/docs/manual-2.2/postgis_installation.html#installation_configuration">postgis 컴파일 문서</a> 에서
+하위 패키지의 경로를 명시하기 위해 설정 커맨드에 추가되어야 하는 몇몇 플래그를 볼 수 있다.</p>
+<p>콘다 빌드 커맨드를 실행하는 동안 <code class="docutils literal notranslate"><span class="pre">$PREFIX</span></code> 환경 변수는 콘다 패키지의 설치 경로를 나타내는데 사용된다.
+우리는 <code class="docutils literal notranslate"><span class="pre">$PREFIX</span></code> 변수를 빌드에 나열된 하위 패키지 경로의 설정 커맨드를 알려주고 콘다 래시피 요구사항을 실행하는데 사용한다.</p>
+<p>텍스트 편집기를 사용해 postgis 디렉토리에 build.sh 파일을 생성하고 다음 내용을 입력한다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh autogen.sh
+./configure <span class="se">\</span>
+  --prefix<span class="o">=</span><span class="nv">$PREFIX</span> <span class="se">\</span>
+  --with-pgconfig<span class="o">=</span><span class="nv">$PREFIX</span>/bin/pg_config <span class="se">\</span>
+  --with-gdalconfig<span class="o">=</span><span class="nv">$PREFIX</span>/bin/gdal-config <span class="se">\</span>
+  --with-xml2config<span class="o">=</span><span class="nv">$PREFIX</span>/bin/xml2-config <span class="se">\</span>
+  --with-geosconfig<span class="o">=</span><span class="nv">$PREFIX</span>/bin/geos-config <span class="se">\</span>
+  --with-projdir<span class="o">=</span><span class="nv">$PREFIX</span> <span class="se">\</span>
+  --with-jsondir<span class="o">=</span><span class="nv">$PREFIX</span> <span class="se">\</span>
+  --without-raster <span class="se">\</span>
+  --without-topology
+
+make
+make install
+</pre></div>
+</div>
+<p>주의: <code class="docutils literal notranslate"><span class="pre">$PREFIX</span></code> 환경 변수로의 레퍼런스가 없으면 설정 커맨드는 요구되는 패키지를 위해 디폴트 시스템 디렉토리를 보게 된다.
+당장 패키지가 제대로 빌드 되었다 하더라도 다른 사용자도 컴파일된 콘다 패키지를 동일하게 빌드할 수 있다는 보장은 없다.</p>
+<p>주의: 이 래시피에서 콘다 빌드를 실행하기 위해 C/C++ 컴파일러, autoconf, automake 를 설치해야 한다.
+이 패키지들은 반드시 시스템 계층에 설치되어야 하고 콘다를 통해 설치해선 안된다.</p>
+</div>
+<div class="section" id="build-postgis">
+<span id="id10"></span><h2>패키지 빌드<a class="headerlink" href="#build-postgis" title="제목 주소">¶</a></h2>
+<p>래시피가 완성 되었으므로 conda build 커맨드를 사용해 postgis 디렉토리의 파일로부터 콘다 패키지를 빌드할 수 있다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda build .
+</pre></div>
+</div>
+<p>콘다 빌드의 출력은 다음과 같이 시작해야 한다.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Removing old build environment
+Removing old work directory
+BUILD START: postgis-2.2.2-0
+Using Anaconda Cloud api site https://api.anaconda.org
+Fetching package metadata: ..........
+Solving package specifications: .........
+</pre></div>
+</div>
+<p>하위 패키지 설치와 소스코드 컴파일에 성공하면 다음 메시지와 함께 콘다 빌드가 종료된다.</p>
+<p>맥 사용자:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>BUILD END: postgis-2.2.2-0
+Nothing to test for: postgis-2.2.2-0
+# anaconda.org 에 패키지를 업로드 하고 싶다면 다음을 입력한다.:
+#
+# $ anaconda upload /Users/adefusco/Applications/anaconda3/conda-bld/osx-64/postgis-2.2.2-0.tar.bz2
+#
+# 콘다 빌드가 자동으로 anaconda.org 에 업로드하게 하려면 다음을 입력한다.:
+# $ conda config --set anaconda_upload yes
+</pre></div>
+</div>
+<p>리눅스 사용자:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>BUILD END: postgis-2.2.2-0
+Nothing to test for: postgis-2.2.2-0
+# anaconda.org 에 패키지를 업로드 하고 싶다면 다음을 입력한다.:
+#
+# $ anaconda upload /home/adefusco/anaconda3/conda-bld/linux-64/postgis-2.2.2-0.tar.bz2
+#
+# 콘다 빌드가 자동으로 anaconda.org 에 업로드하게 하려면 다음을 입력한다.:
+# $ conda config --set anaconda_upload yes
+</pre></div>
+</div>
+<p>주의: 사용자의 경로는 아나콘다가 설치된 위치에 따라 달라질 수 있다.</p>
+<p>주의: troubleshooting 섹션에서 콘다 빌드 에러 진단에 대한 도움말을 보자.</p>
+<p>주의: 패키지는 동일한 아키텍쳐를 사용하는 시스템에만 설치될 수 있다.
+맥과 리눅스에서 conda build 커맨드를 별도로 실행해 각각의 아키텍쳐를 위한 패키지를 생성해야 한다.</p>
+</div>
+<div class="section" id="install">
+<span id="id11"></span><h2>패키지 배포와 설치<a class="headerlink" href="#install" title="제목 주소">¶</a></h2>
+<p>이번에는 다음 커맨드를 사용해 사용자의 로컬 기기에 패키지를 설치해보자.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install postgis --use-local
+</pre></div>
+</div>
+<p>콘다 빌드 출력 끝부분에 나타난 anaconda upload 커맨드로 사용자의 Anaconda.org 채널에 패키지를 업로드 할 수 있다.
+이를 통해 다음 커맨드를 사용하면 어떤 사용자도 패키지를 설치할 수 있다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c CHANNEL postgis
+</pre></div>
+</div>
+<p>주의: CHANNEL 을 사용자의 <a class="reference external" href="http://anaconda.org/">anaconda.org</a> username 으로 대체한다..</p>
+</div>
+<div class="section" id="help3">
+<span id="id12"></span><h2>트러블 슈팅과 추가 정보<a class="headerlink" href="#help3" title="제목 주소">¶</a></h2>
+<p><a class="reference external" href="https://conda.io/docs/troubleshooting.html">트러블 슈팅</a> 페이지는 콘다 빌드가 실패한 상황을 위한 유용한 도움말을 포함하고 있다.</p>
+<p>전체 콘다 래시피 <a class="reference external" href="https://conda.io/docs/building/meta-yaml.html">문서</a> 와 <a class="reference external" href="https://conda.io/docs/building/sample-recipes.html">간단 래시피</a> 페이지에서 콘다 래시피 meta.yaml 파일에 대한 옵션들을 볼 수 있다.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

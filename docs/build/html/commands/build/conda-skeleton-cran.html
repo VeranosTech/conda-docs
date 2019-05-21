@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>conda skeleton cran &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>conda skeleton cran</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/commands/build/conda-skeleton-cran.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conda-skeleton-cran">
+<span id="skeleton-cran-ref"></span><h1>conda skeleton cran<a class="headerlink" href="#conda-skeleton-cran" title="제목 주소">¶</a></h1>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       conda - conda skeleton cran
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       usage: conda-skeleton cran [-h] [--output-dir OUTPUT_DIR]
+
+       [--output-suffix OUTPUT_SUFFIX]
+              [--add-maintainer ADD_MAINTAINER] [--version VERSION] [--git-tag
+              GIT_TAG]   [--all-urls]   [--cran-url   CRAN_URL]    [--r-interp
+              R_INTERP]          [--use-binaries-ver         USE_BINARIES_VER]
+              [--use-when-no-binary           {src,old,src-old,old-src,error}]
+              [--use-noarch-generic]      [--use-rtools-win]     [--recursive]
+              [--no-recursive]       [--no-archive]        [--version-compare]
+              [--update-policy      {error,skip-up-to-date,skip-existing,over-
+              write,merge-keep-build-num,merge-incr-build-num}]   [-m    VARI-
+              ANT_CONFIG_FILES] packages [packages ...]
+
+   <B>positional</B> <B>arguments:</B>
+       packages
+              CRAN packages to create recipe skeletons for.
+
+   <B>optional</B> <B>arguments:</B>
+       <B>-h</B>, <B>--help</B>
+              Show this help message and exit.
+
+       <B>--output-dir</B> OUTPUT_DIR
+              Directory to write recipes to (default: .).
+
+       <B>--output-suffix</B> OUTPUT_SUFFIX
+              Suffix  to add to recipe dir, can contain other dirs (eg: <B>-feed-</B>
+              <B>stock</B>/recipe). (default: )
+
+       <B>--add-maintainer</B> ADD_MAINTAINER
+              Add this github username as a maintainer if not already present.
+              (default: None)
+
+       <B>--version</B> VERSION
+              Version to use. Applies to all packages. (default: None)
+
+       <B>--git-tag</B> GIT_TAG
+              Git tag to use for GitHub recipes. (default: None)
+
+       <B>--all-urls</B>
+              Look  at  all  URLs,  not just source URLs. Use this if it can't
+              find the right URL. (default: False)
+
+       <B>--cran-url</B> CRAN_URL
+              URL to use for as source package repository (default: None)
+
+       <B>--r-interp</B> R_INTERP
+              Declare R interpreter package (default: r-base)
+
+       <B>--use-binaries-ver</B> USE_BINARIES_VER
+              Repackage binaries from version provided by argument instead  of
+              building from source. (default: None)
+
+       <B>--use-when-no-binary</B> {src,old,src-old,old-src,error}
+              Sometimes  binaries are not available at the correct version for
+              a given platform (macOS). You can use this flag to specify  what
+              fallback to take, either compiling from source or using an older
+              binary or trying one then the other. (default: src)
+
+       <B>--use-noarch-generic</B>
+              Mark packages that do not need compilation as `noarch:  generic`
+              (default: False)
+
+       <B>--use-rtools-win</B>
+              Use Rtools when building from source on Windows (default: False)
+
+       <B>--recursive</B>
+              Create recipes for dependencies if they do  not  already  exist.
+              (default: False)
+
+       <B>--no-recursive</B>
+              Don't  create  recipes  for  dependencies if they do not already
+              exist. (default: True)
+
+       <B>--no-archive</B>
+              Don't include an Archive download url. (default: True)
+
+       <B>--version-compare</B>
+              Compare the package version of the recipe with the one available
+              on  CRAN.  Exits  1 if a newer version is available and 0 other-
+              wise. (default: False)
+
+       <B>--update-policy</B>              {error,skip-up-to-date,skip-existing,over-
+       write,merge-keep-build-num,merge-incr-build-num}
+              Dictates what to do when existing packages  are  encountered  in
+              the output directory (set by <B>--outputdir</B>). In the present imple-
+              mentation, the  merge  options  avoid  overwriting  bld.bat  and
+              build.sh  and  only  manage  copying  across  patches,  and  the
+              `build/{number,script_env}` fields. When  the  version  changes,
+              both  merge options reset `build/number` to 0.  When the version
+              does not change they either keep the old `build/number` or  else
+              increase it by one.  (default: error)
+
+       <B>-m</B> VARIANT_CONFIG_FILES, <B>--variant-config-files</B> VARIANT_CONFIG_FILES
+              Variant  config  file  to add. These yaml files can contain keys
+              such as `cran_mirror`. Only one can be provided here.  (default:
+              None)
+
+
+
+
+</PRE>
+<H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+</PRE></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

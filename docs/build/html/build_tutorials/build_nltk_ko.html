@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NLTK 를 위한 콘다 패키지 빌드 &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>NLTK 를 위한 콘다 패키지 빌드</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/build_tutorials/build_nltk_ko.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nltk">
+<h1>NLTK 를 위한 콘다 패키지 빌드<a class="headerlink" href="#nltk" title="제목 주소">¶</a></h1>
+<p>자연어 처리 툴킷 (NLTK) 은 인간 언어 데이터의 통계적 자연어 처리 (NLP) 에 사용되는 파이썬 패키지 개발에 사용되는 플랫폼이다.
+설치하기 쉽지는 않지만 NLTK 콘다 패키지를 빌든하는 것은 어렵지 않다.</p>
+<p>이 패키지는 모든 NLTK 데이터셋을 포함한다. 데이터셋은 8GB 정도를 차지한다.</p>
+<p>다음 파일을 다운로드 한다. <a class="reference external" href="https://gist.github.com/danielfrg/d17ffffe0dc8ed56712a0470169ff546">https://gist.github.com/danielfrg/d17ffffe0dc8ed56712a0470169ff546</a> (우측 상단의 Download
+ZIP 버튼을 클릭한다.).</p>
+<p>다운로드한 파일의 압축을 풀고 다운로드 된 디렉토리를 <code class="docutils literal notranslate"><span class="pre">/nltk-with-data/</span></code> 로 변경한다.</p>
+<p>conda build 가 없다면 설치한다.:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">conda-build</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> 를 사용해 nltk-with-data directory 의 한단계 상위 디렉토리로 변경한다.</p>
+<p>필요한 파이썬 버전들을 위해 conda build 를 실행하고 커맨드를 실행 중인 운영체제에 해당하는 패키지를 선택한다.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda build nltk-with-data --python <span class="m">2</span>.7
+conda build nltk-with-data --python <span class="m">3</span>.4
+conda build nltk-with-data --python <span class="m">3</span>.5
+conda build nltk-with-data --python <span class="m">3</span>.6
+</pre></div>
+</div>
+<p>출력되는 콘다 패키지는 $CONDA_ROOT/conda-bld/$ARCH/nltk-with-data.tar.bz2 에 위치한다.
+$CONDA_ROOT 는 아나콘다가 설치된 루트이고 $ARCH 는 패키지를 빌드할 아키텍쳐이다.</p>
+<p>출력된 콘다 패키지를 사용자의 로컬 저장소 또는 <cite>아나콘다 노트북 확장 &lt;https://docs.continuum.io/anaconda/jupyter-notebook-extensions&gt;</cite> 을 사용하는
+<a class="reference external" href="https://anaconda.org">아나콘다 클라우드</a> 로 업로드 한다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>anaconda upload <span class="nv">$CONDA_ROOT</span>/conda-bld/<span class="nv">$ARCH</span>/nltk-with-data.tar.bz2
+anaconda upload <span class="nv">$CONDA_ROOT</span>/conda-bld/<span class="nv">$ARCH</span>/nltk-with-data.tar.bz2
+anaconda upload <span class="nv">$CONDA_ROOT</span>/conda-bld/<span class="nv">$ARCH</span>/nltk-with-data.tar.bz2
+anaconda upload <span class="nv">$CONDA_ROOT</span>/conda-bld/<span class="nv">$ARCH</span>/nltk-with-data.tar.bz2
+</pre></div>
+</div>
+<p>선택: 위의 단계들을 다른 운영체제에서 반복하면 그 운영체제를 위한 콘다 패키지를 빌드한다.
+순수 파이썬 패키지라면 conda convert 를 사용해도 된다. 새로운 버전의 NLTK 가 배포되면 래시피를 업데이트하고 위 단계를 반복할 수 있다.</p>
+<div class="section" id="id2">
+<h2>콘다로부터 설치<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install nltk-with-data
+$ ipython
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk.corpus</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">treebank</span>
+</pre></div>
+</div>
+<p>위 커맨드는 콘다 패키지를 사용해 데이터를 로드하고 있음을 보여줄 것이다.</p>
+<p>콘다가 패키지를 설치하고나면 모든 데이터셋과 함께 라이브러리를 사용할 수 있다.</p>
+<p>참고: <a class="reference external" href="http://www.nltk.org/">NLTK documentation</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+.. _list_ref:
+
+conda list
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda list
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage: conda list [-h] [-n ENVIRONMENT | <B>-p</B> PATH] [--json] [--debug]
+   
+                 [--verbose]  [--show-channel-urls] [--no-show-channel-urls] [-c]
+                 [-f] [--explicit] [--md5] [-e] [-r] [--no-pip] [regex]
+   
+          List linked packages in a conda environment.
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>positional</B> <B>arguments:</B>
+          regex  List only packages matching this regular expression.
+   
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+          <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
+                 Name of environment.
+   
+          <B>-p</B> PATH, <B>--prefix</B> PATH
+                 Full path to environment prefix.
+   
+          <B>--json</B> Report all output as json. Suitable for using conda programmati-
+                 cally.
+   
+          <B>--debug</B>
+                 Show debug output.
+   
+          <B>--verbose</B>, <B>-v</B>
+                 Use once for info, twice for debug, three times for trace.
+   
+          <B>--show-channel-urls</B>
+                 Show  channel  urls.  Overrides the value given by `conda config
+                 <B>--show</B> show_channel_urls`.
+   
+          <B>--no-show-channel-urls</B>
+                 Don't show channel urls. Overrides the  value  given  by  `conda
+                 config <B>--show</B> show_channel_urls`.
+   
+          <B>-c</B>, <B>--canonical</B>
+                 Output canonical names of packages only. Implies <B>--nopip</B>.
+   
+          <B>-f</B>, <B>--full-name</B>
+                 Only search for full names, i.e., ^&lt;regex&gt;$.
+   
+          <B>--explicit</B>
+                 List  explicitly  all  installed conda packaged with URL (output
+                 may be used by conda create <B>--file</B>).
+   
+          <B>--md5</B>  Add MD5 hashsum when using <B>--explicit</B>
+   
+          <B>-e</B>, <B>--export</B>
+                 Output requirement string only (output may be used by conda cre-
+                 ate <B>--file</B>).
+   
+          <B>-r</B>, <B>--revisions</B>
+                 List the revision history and exit.
+   
+          <B>--no-pip</B>
+                 Do not include pip-only installed packages.
+   
+   
+   </PRE>
+   <H2>EXAMPLES</H2><PRE>
+          List all packages in the current environment:
+   
+                 conda list
+   
+          List all packages installed into the environment 'myenv':
+   
+                 conda list -n myenv
+   
+          Save packages for future use:
+   
+                 conda list --export &gt; package-list.txt
+   
+          Reinstall packages from an export file:
+   
+                 conda create -n myenv --file package-list.txt
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

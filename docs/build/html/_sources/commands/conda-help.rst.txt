@@ -1,0 +1,49 @@
+
+.. _help_ref:
+
+conda help
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda help
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage: conda help [-h] [COMMAND]
+   
+          Displays a list of available conda commands and their help strings.
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>positional</B> <B>arguments:</B>
+          COMMAND
+                 Print  help  information  for  COMMAND  (same  as: conda COMMAND
+                 <B>--help</B>).
+   
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+   
+   </PRE>
+   <H2>EXAMPLES</H2><PRE>
+                 conda help install
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

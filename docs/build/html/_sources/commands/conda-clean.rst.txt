@@ -1,0 +1,85 @@
+
+.. _clean_ref:
+
+conda clean
+=======================
+
+.. raw:: html
+
+   <PRE>
+   <!-- Manpage converted by man2html 3.0.1 -->
+   <B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+   
+   
+   
+   
+   </PRE>
+   <H2>NAME</H2><PRE>
+          conda - conda clean
+   
+   
+   </PRE>
+   <H2>DESCRIPTION</H2><PRE>
+          usage: conda clean [-h] [-y] [--dry-run] [--json] [--debug] [--verbose]
+          [-q]
+   
+                 [-a] [-i] [-l] [-t] [-p] [-s]
+   
+          Remove unused packages and caches.
+   
+   
+   </PRE>
+   <H2>OPTIONS</H2><PRE>
+      <B>optional</B> <B>arguments:</B>
+          <B>-h</B>, <B>--help</B>
+                 Show this help message and exit.
+   
+          <B>-y</B>, <B>--yes</B>
+                 Do not ask for confirmation.
+   
+          <B>--dry-run</B>
+                 Only display what would have been done.
+   
+          <B>--json</B> Report all output as json. Suitable for using conda programmati-
+                 cally.
+   
+          <B>--debug</B>
+                 Show debug output.
+   
+          <B>--verbose</B>, <B>-v</B>
+                 Use once for info, twice for debug, three times for trace.
+   
+          <B>-q</B>, <B>--quiet</B>
+                 Do not display progress bar.
+   
+          <B>-a</B>, <B>--all</B>
+                 Remove index cache, lock files, tarballs, unused cache packages,
+                 and source cache.
+   
+          <B>-i</B>, <B>--index-cache</B>
+                 Remove index cache.
+   
+          <B>-l</B>, <B>--lock</B>
+                 Remove all conda lock files.
+   
+          <B>-t</B>, <B>--tarballs</B>
+                 Remove cached package tarballs.
+   
+          <B>-p</B>, <B>--packages</B>
+                 Remove unused cached packages. Warning: this does not check  for
+                 symlinked packages.
+   
+          <B>-s</B>, <B>--source-cache</B>
+                 Remove files from the source cache of conda build.
+   
+   
+   </PRE>
+   <H2>EXAMPLES</H2><PRE>
+                 conda clean --tarballs
+   
+   
+   
+   
+   </PRE>
+   <H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+   </PRE>

@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>자동 설치 &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>자동 설치</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/help/silent_ko.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>자동 설치<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<p>미니콘다 또는 아나콘다의 자동설치는 Travis CI, Appveyor 와 같은 개발 서비스나 배포, 테스트 등에 사용될 수 있다.
+자동 모드에서 스크린 프롬프트는 나타나지 않고 디폴트 설정은 자동으로 허용된다.</p>
+<p>주의: 이 설명서는 미니콘다를 위해 작성되었다. 아나콘다를 사용중이라면 아래 예시들에서 &quot;Miniconda&quot; 를 &quot;Anaconda&quot; 로 대체한다.</p>
+<p>아나콘다 또는 미니콘다의 최신 버전을 사용하는 것을 권장한다. 다음 커맨드로 버전을 확인하자.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda update conda</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>윈도우<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>미니콘다의 윈도우 인스톨러는 <code class="docutils literal notranslate"><span class="pre">/S</span></code> 인수를 사용해 자동 설치 모드를 실행할 수 있다.
+아래 선택 인수들이 지원된다.:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">/InstallationType=[JustMe|AllUsers]</span></code>, 디폴트: <code class="docutils literal notranslate"><span class="pre">JustMe</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">/AddToPath=[0|1]</span></code>, 디폴트: <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">/RegisterPython=[0|1]</span></code>, 시스템의 디폴트 파이썬으로 지정한다. 디폴트: <code class="docutils literal notranslate"><span class="pre">0</span></code> (현재 사용자), <code class="docutils literal notranslate"><span class="pre">1</span></code> (모든 사용자)</li>
+<li><code class="docutils literal notranslate"><span class="pre">/S</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">/D=&lt;installation</span> <span class="pre">path&gt;</span></code></li>
+</ul>
+<p>모든 인수는 대소문자를 구분한다. 설치 경로는 반드시 마시막 인수여야 하고 인용 문자로 둘러싸면 안된다.
+<code class="docutils literal notranslate"><span class="pre">/S</span></code>  인수로 자동 설치를 사용할 때 <code class="docutils literal notranslate"><span class="pre">/D</span></code> 로 최종 설치 경로를 지정해야 한다.</p>
+<p>다음 커맨드는 현재 사용자를 위해 미니콘다를 설치한다. 파이썬을 시스템 디폴트로 인증하지 않고 진행한다.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">start</span> /wait <span class="s2">&quot;&quot;</span> Miniconda4-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=<span class="nv">%UserProfile%</span>\Miniconda3
+</pre></div>
+</div>
+</div>
+<div class="section" id="os-x">
+<h2>리눅스와 OS X<a class="headerlink" href="#os-x" title="제목 주소">¶</a></h2>
+<p>리눅스와 OS X 의 미니콘다 자동 설치는 bash 인스톨러에서 <code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">-p</span></code> 인수를 지정해주면 된다.
+아래 인수들이 지원된다.:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">-b</span></code>, 배치 모드, <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> 로의 경로 수정을 하지 않는다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">-p</span></code>, 설치 접두어/경로</li>
+<li><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">-p</span></code> 가 이미 존재하더라도 강제 설치를 진행한다.</li>
+</ul>
+<p>배치 모드는 사용자가 라이센스에 동의했다고 간주하고 설치를 진행한다. .bashrc 또는 .bash_profile 파일을 수정하지 않는다.</p>
+<p>완성된 예시:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget http://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p <span class="nv">$HOME</span>/miniconda
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/miniconda/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>주의: 현재 세션의 경로만을 지정하므로 영구적이지 않다. 콘다가 지정한 경로에 없을 때 콘다를 사용하면 &quot;command not found&quot; 메시지가 나타난다.</p>
+<p>새로운 배치 세션마다 콘다를 사용하기 전에 <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">$HOME/miniconda3/bin/activate</span></code> 를 실행하는 것을 권장한다.
+이 커맨드로 경로를 설정하고 콘다 패키지의 활성화 스크립트를 실행한다.
+<code class="docutils literal notranslate"><span class="pre">$HOME/miniconda3/bin/activate</span></code> 를 콘다 설치의 활성화 스크립트의 경로로 대체한다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> 파일에 <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=&quot;$HOME/miniconda3/bin:$PATH&quot;</span></code> 과 같은 라인을 추가함으로써 경로를 영구적으로 설정할 수 있다.
+그러나 이 방법은 콘다를 콘다 패키지의 활성화 스크립트 없이 사용할 수 있게 하므로 에러가 발생할 수 있다.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

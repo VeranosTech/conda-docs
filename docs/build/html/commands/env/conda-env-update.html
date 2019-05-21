@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>conda env update &mdash; Conda   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Conda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                 
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conda-build.html">Conda-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../miniconda.html">Miniconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help-support.html">도움말과 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Conda license</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Conda</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>conda env update</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/conda/conda-docs/blob/master/docs/source/commands/env/conda-env-update.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conda-env-update">
+<span id="env-update-ref"></span><h1>conda env update<a class="headerlink" href="#conda-env-update" title="제목 주소">¶</a></h1>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B>CONDA(1)</B>                         User Commands                        <B>CONDA(1)</B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       conda - conda env update
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       usage:  conda-env  update  [-h]  [-n  ENVIRONMENT  | <B>-p</B> PATH] [-f FILE]
+       [--prune]
+
+       [-q] [--json] [--debug] [--verbose]
+              [remote_definition]
+
+       Update the current environment based on environment file
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>positional</B> <B>arguments:</B>
+       remote_definition
+              remote environment definition / IPython notebook
+
+   <B>optional</B> <B>arguments:</B>
+       <B>-h</B>, <B>--help</B>
+              Show this help message and exit.
+
+       <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
+              Name of environment.
+
+       <B>-p</B> PATH, <B>--prefix</B> PATH
+              Full path to environment prefix.
+
+       <B>-f</B> FILE, <B>--file</B> FILE
+              environment definition (default: environment.yml)
+
+       <B>--prune</B>
+              remove installed packages not defined in environment.yml
+
+       <B>-q</B>, <B>--quiet</B>
+
+       <B>--json</B> Report all output as json. Suitable for using conda programmati-
+              cally.
+
+       <B>--debug</B>
+              Show debug output.
+
+       <B>--verbose</B>, <B>-v</B>
+              Use once for info, twice for debug, three times for trace.
+
+   <B>examples:</B>
+              conda  env  update  conda  env  update  <B>-n</B>=<I>foo</I>  conda env update
+              <B>-f=</B>/path/to/environment.yml   conda   env   update    <B>--name</B>=<I>foo</I>
+              <B>--file</B>=<I>environment</I>.yml conda env update vader/deathstar
+
+
+
+
+</PRE>
+<H2>Anaconda, Inc.                      1i 2019                           CONDA(1)</H2><PRE>
+</PRE></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaconda, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-11', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
